@@ -1,0 +1,11 @@
+{
+  "fitCases": 3000,
+  "fitUnexpected": 0,
+  "gpuCases": 3000,
+  "gpuUnexpected": 0,
+  "runtimeCases": 1500,
+  "runtimeUnexpected": 0,
+  "sealCases": 2000,
+  "sealUnexpected": 0,
+  "note": "Seeded (13) random hostile inputs. \"Unexpected\" counts TypeError/RangeError/non-Error throws and invariant breaks; a clean Error rejection is acceptable. Not a coverage-guided fuzzer."
+}

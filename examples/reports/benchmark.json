@@ -1,0 +1,89 @@
+{
+  "schema": "localsutra.benchmark.v1",
+  "type": "synthetic_cpu_workload_not_ai_inference",
+  "runs": 5,
+  "iterations": 50000,
+  "warmupDiscarded": true,
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "statistics": {
+    "wallMs": {
+      "samples": 5,
+      "mean": 0.5508799999999999,
+      "median": 0.5734,
+      "p95": 0.8934,
+      "min": 0.2678,
+      "max": 0.8934,
+      "stdev": 0.26958302431718506
+    },
+    "cpuUserMs": {
+      "samples": 5,
+      "mean": 3.2,
+      "median": 0,
+      "p95": 16,
+      "min": 0,
+      "max": 16,
+      "stdev": 7.155417527999328
+    },
+    "rssBytes": {
+      "samples": 5,
+      "mean": 70985318.4,
+      "median": 71008256,
+      "p95": 71016448,
+      "min": 70889472,
+      "max": 71016448,
+      "stdev": 53765.36354196818
+    }
+  },
+  "samples": [
+    {
+      "wallMs": 0.8934,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 70889472,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 0.7213,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 15,
+      "processRssBytes": 71004160,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 0.5734,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 71008256,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 0.2678,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 71008256,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 0.2985,
+      "cpuUserMs": 16,
+      "cpuSystemMs": 0,
+      "processRssBytes": 71016448,
+      "checksum": 35980960
+    }
+  ],
+  "limits": [
+    "Not an LLM or runtime benchmark",
+    "Process RSS is not GPU VRAM",
+    "Host load and thermal state affect results",
+    "No power, energy or model quality measured",
+    "Small sample counts give wide uncertainty; see stdev"
+  ],
+  "evidence": {
+    "algorithm": "sha256",
+    "sha256": "03fd7b02f5f35fadb76d1906fc28b9e39799be1bc30babe1c9dec9a672de5388"
+  }
+}

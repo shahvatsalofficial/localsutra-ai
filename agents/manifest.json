@@ -1,0 +1,135 @@
+{
+  "project": "LocalSutra AI",
+  "author": "Vatsal Shah",
+  "chief": "localsutra-prime",
+  "roles": [
+    {
+      "id": "localsutra-prime",
+      "name": "Prime",
+      "description": "Orchestrate permitted local-AI readiness checks and independent evidence review.",
+      "skill": "skills/localsutra-prime/SKILL.md"
+    },
+    {
+      "id": "localsutra-hardware-atlas",
+      "name": "Hardware Atlas",
+      "description": "Inspect OS, CPU, RAM and reproducible host capabilities without fabricating GPU/VRAM.",
+      "skill": "skills/localsutra-hardware-atlas/SKILL.md"
+    },
+    {
+      "id": "localsutra-silicon-scout",
+      "name": "Silicon Scout",
+      "description": "Research GPU/NPU driver and accelerator discovery as an opt-in platform adapter.",
+      "skill": "skills/localsutra-silicon-scout/SKILL.md"
+    },
+    {
+      "id": "localsutra-model-fit-navigator",
+      "name": "Model Fit Navigator",
+      "description": "Make explicitly approximate parameter and quantization memory estimates.",
+      "skill": "skills/localsutra-model-fit-navigator/SKILL.md"
+    },
+    {
+      "id": "localsutra-quantization-lens",
+      "name": "Quantization Lens",
+      "description": "Explain quantization quality, accuracy, KV-cache and precision trade-offs.",
+      "skill": "skills/localsutra-quantization-lens/SKILL.md"
+    },
+    {
+      "id": "localsutra-runtime-doctor",
+      "name": "Runtime Doctor",
+      "description": "Diagnose installed Ollama/llama.cpp instances with constrained local endpoints.",
+      "skill": "skills/localsutra-runtime-doctor/SKILL.md"
+    },
+    {
+      "id": "localsutra-port-boundary",
+      "name": "Port Boundary",
+      "description": "Assess local service ports, bind addresses and exposure limitations.",
+      "skill": "skills/localsutra-port-boundary/SKILL.md"
+    },
+    {
+      "id": "localsutra-privacy-firewall",
+      "name": "Privacy Firewall",
+      "description": "Keep secrets and prompts local while labeling unaudited runtime egress.",
+      "skill": "skills/localsutra-privacy-firewall/SKILL.md"
+    },
+    {
+      "id": "localsutra-offline-proof",
+      "name": "Offline Proof",
+      "description": "Design and verify external network-disconnection tests without misleading claims.",
+      "skill": "skills/localsutra-offline-proof/SKILL.md"
+    },
+    {
+      "id": "localsutra-benchmark-lab",
+      "name": "Benchmark Lab",
+      "description": "Run bounded representative local workloads and record actual sample statistics.",
+      "skill": "skills/localsutra-benchmark-lab/SKILL.md"
+    },
+    {
+      "id": "localsutra-inference-witness",
+      "name": "Inference Witness",
+      "description": "Verify generated response timing and runtime counters without storing content.",
+      "skill": "skills/localsutra-inference-witness/SKILL.md"
+    },
+    {
+      "id": "localsutra-memory-guardian",
+      "name": "Memory Guardian",
+      "description": "Distinguish process RSS, model RAM, VRAM and other measurement scopes.",
+      "skill": "skills/localsutra-memory-guardian/SKILL.md"
+    },
+    {
+      "id": "localsutra-model-provenance",
+      "name": "Model Provenance",
+      "description": "Track model source, version, license, hashes and user-supplied catalogs.",
+      "skill": "skills/localsutra-model-provenance/SKILL.md"
+    },
+    {
+      "id": "localsutra-install-steward",
+      "name": "Install Steward",
+      "description": "Prepare consent-based OS-specific setup steps and rollback plans.",
+      "skill": "skills/localsutra-install-steward/SKILL.md"
+    },
+    {
+      "id": "localsutra-compatibility-bridge",
+      "name": "Compatibility Bridge",
+      "description": "Map adapters for Ollama, llama.cpp, ONNX Runtime and supported providers.",
+      "skill": "skills/localsutra-compatibility-bridge/SKILL.md"
+    },
+    {
+      "id": "localsutra-setup-mentor",
+      "name": "Setup Mentor",
+      "description": "Create beginner-friendly instructions and actionable explanations.",
+      "skill": "skills/localsutra-setup-mentor/SKILL.md"
+    },
+    {
+      "id": "localsutra-evidence-ledger",
+      "name": "Evidence Ledger",
+      "description": "Maintain versioned, tamper-evident test outputs and limitations.",
+      "skill": "skills/localsutra-evidence-ledger/SKILL.md"
+    },
+    {
+      "id": "localsutra-ide-bridge",
+      "name": "IDE Bridge",
+      "description": "Package skills for multiple IDEs and report unverified native execution.",
+      "skill": "skills/localsutra-ide-bridge/SKILL.md"
+    },
+    {
+      "id": "localsutra-security-sentinel",
+      "name": "Security Sentinel",
+      "description": "Audit prompt injection, local exposure, dependency and installer risks.",
+      "skill": "skills/localsutra-security-sentinel/SKILL.md"
+    },
+    {
+      "id": "localsutra-release-auditor",
+      "name": "Release Auditor",
+      "description": "Independently check acceptance, documented gaps and public-release claims.",
+      "skill": "skills/localsutra-release-auditor/SKILL.md"
+    }
+  ],
+  "capability_skills": [
+    "localsutra-hardware-discovery",
+    "localsutra-model-fit",
+    "localsutra-runtime-health",
+    "localsutra-offline-verification",
+    "localsutra-resource-benchmark"
+  ],
+  "notice": "These describe agent roles; running the CLI does not autonomously instantiate twenty AI agents."
+}

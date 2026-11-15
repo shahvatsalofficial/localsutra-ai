@@ -1,0 +1,2 @@
+# Claude Code Orchestration
+Read `AGENTS.md`, `docs/CLAUDE_MASTER_BUILD_PROMPT.md`, `docs/STATUS.md` and the portable `skills/localsutra-prime/SKILL.md`. Inspect existing repository before modifying. Run `npm test` and `npm run demo` before extending. Use specialists in `.claude/agents/` selectively, based on your host's documented tools; do not assume skills are auto-installed or 20 models are running. Never make unapproved network calls or global installs. Build the next verified capability and report evidence.

@@ -1,0 +1,41 @@
+{
+  "name": "private-inference",
+  "version": "1.0",
+  "status": "partially_implemented",
+  "trigger": "user request, not background daemon",
+  "default_permissions": [
+    "read-only",
+    "no cloud",
+    "no installs"
+  ],
+  "steps": [
+    {
+      "index": 1,
+      "instruction": "Require explicit local model ID and prompt permission",
+      "evidence_required": true
+    },
+    {
+      "index": 2,
+      "instruction": "Reject any non-loopback URL",
+      "evidence_required": true
+    },
+    {
+      "index": 3,
+      "instruction": "Bound generated tokens, runs, response size and timeout",
+      "evidence_required": true
+    },
+    {
+      "index": 4,
+      "instruction": "Record timing and runtime counters without prompt/response text",
+      "evidence_required": true
+    }
+  ],
+  "human_approval": "Any external/network writes, install, model download, elevated access, hosted operation",
+  "outcome_statuses": [
+    "observed",
+    "heuristic",
+    "not_run",
+    "unknown",
+    "blocked"
+  ]
+}

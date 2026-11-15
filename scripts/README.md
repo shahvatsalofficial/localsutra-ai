@@ -1,0 +1,1 @@
+Scripts print safe setup instructions only. They do not install system packages, drivers, models or plugins. `install-skills` is project-local and refuses overwriting existing SKILL.md files. Back up your project and inspect paths first.

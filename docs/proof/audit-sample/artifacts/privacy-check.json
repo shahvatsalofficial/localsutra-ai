@@ -1,0 +1,59 @@
+{
+  "schema": "localsutra.privacy.v1",
+  "endpointAllowed": true,
+  "reason": "Only an explicit loopback endpoint is permitted; no network request was performed by this audit.",
+  "claims": {
+    "coreHasNoMandatoryCloudApiKey": true,
+    "remoteEndpointBlockedByValidation": true,
+    "modelRuntimeEgress": "not_tested",
+    "modelRuntimeTelemetry": "not_tested"
+  },
+  "dataInventory": [
+    {
+      "field": "OS, architecture, CPU model/count, RAM total/free",
+      "storedIn": "report files you choose to write",
+      "retention": "until you delete the file",
+      "shared": "never automatically"
+    },
+    {
+      "field": "GPU name, VRAM, driver (only if nvidia-smi is present)",
+      "storedIn": "report files you choose to write",
+      "retention": "until you delete the file",
+      "shared": "never automatically"
+    },
+    {
+      "field": "Free disk space of the working-directory volume",
+      "storedIn": "report files you choose to write",
+      "retention": "until you delete the file",
+      "shared": "never automatically"
+    },
+    {
+      "field": "Model ids from your catalog or a local Ollama /api/tags listing",
+      "storedIn": "report files you choose to write",
+      "retention": "until you delete the file",
+      "shared": "never automatically"
+    },
+    {
+      "field": "Prompt hash (SHA-256) for opt-in inference",
+      "storedIn": "inference report",
+      "retention": "until you delete the file",
+      "shared": "never automatically"
+    },
+    {
+      "field": "Prompt and response text",
+      "storedIn": "not stored",
+      "retention": "none",
+      "shared": "never"
+    }
+  ],
+  "notes": [
+    "External runtimes may use their own network features",
+    "For air-gap claims, use external network monitoring and disconnect tests",
+    "This audit does not establish compliance or end-to-end encryption",
+    "Hardware profile, model list and file names can be sensitive: review reports before sharing"
+  ],
+  "evidence": {
+    "algorithm": "sha256",
+    "sha256": "209bd2ec2b2395945e600b565047f04d034bc5ba2f03c5b0f821b82cf4bad881"
+  }
+}

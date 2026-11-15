@@ -1,0 +1,89 @@
+{
+  "schema": "localsutra.benchmark.v1",
+  "type": "synthetic_cpu_workload_not_ai_inference",
+  "runs": 5,
+  "iterations": 50000,
+  "warmupDiscarded": true,
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "statistics": {
+    "wallMs": {
+      "samples": 5,
+      "mean": 0.2023,
+      "median": 0.1822,
+      "p95": 0.2497,
+      "min": 0.1607,
+      "max": 0.2497,
+      "stdev": 0.0389862155126655
+    },
+    "cpuUserMs": {
+      "samples": 5,
+      "mean": 0,
+      "median": 0,
+      "p95": 0,
+      "min": 0,
+      "max": 0,
+      "stdev": 0
+    },
+    "rssBytes": {
+      "samples": 5,
+      "mean": 70651084.8,
+      "median": 70676480,
+      "p95": 70746112,
+      "min": 70524928,
+      "max": 70746112,
+      "stdev": 99634.72641202966
+    }
+  },
+  "samples": [
+    {
+      "wallMs": 0.2497,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 70524928,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 0.1822,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 70569984,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 0.2377,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 70676480,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 0.1607,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 70737920,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 0.1812,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 70746112,
+      "checksum": 35980960
+    }
+  ],
+  "limits": [
+    "Not an LLM or runtime benchmark",
+    "Process RSS is not GPU VRAM",
+    "Host load and thermal state affect results",
+    "No power, energy or model quality measured",
+    "Small sample counts give wide uncertainty; see stdev"
+  ],
+  "evidence": {
+    "algorithm": "sha256",
+    "sha256": "2202b0edfacab7d031e66486ee8ea88ed78368edecd3066f1a891e77b8f0931c"
+  }
+}

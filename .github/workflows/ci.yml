@@ -1,0 +1,78 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    name: test (${{ matrix.os }}, node ${{ matrix.node }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: ubuntu-latest, node: '20'}
+          - {os: ubuntu-latest, node: '22'}
+          - {os: ubuntu-latest, node: '24'}
+          - {os: windows-latest, node: '20'}
+          - {os: windows-latest, node: '22'}
+          - {os: macos-latest, node: '22'}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Unit, integration and security tests
+        run: npm test
+      - name: Host doctor
+        run: npm run doctor
+      - name: Offline demo
+        run: npm run demo
+      - name: Audit report (JSON + MD + HTML)
+        run: node packages/cli/index.mjs audit --out audit-out
+      - name: Upload audit report
+        if: matrix.os == 'ubuntu-latest' && matrix.node == '22'
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-report
+          path: audit-out
+          retention-days: 14
+  package:
+    name: npm pack and clean install
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Pack
+        run: npm pack --silent
+      - name: Install tarball in an empty project and run the CLI through the npm bin shim
+        run: |
+          mkdir smoke && cd smoke && npm init -y >/dev/null
+          npm install ../localsutra-ai-*.tgz
+          npx localsutra --version
+          npx localsutra doctor >/dev/null
+          npx localsutra audit --out out --quiet
+          test -f out/audit-report.html && test -f out/audit-report.md && test -f out/audit-report.json
+          npx localsutra verify --report out/audit-report.json
+          npx localsutra install-skills --ide claude --project . >/dev/null
+          test -f .claude/skills/localsutra-prime/SKILL.md
+  secrets-scan:
+    name: secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Scan for committed tokens
+        run: |
+          if git grep -nE '(ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|npm_[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----)' -- . ':!tests'; then echo "Possible secret committed"; exit 1; fi

@@ -1,0 +1,41 @@
+{
+  "name": "hardware-readiness",
+  "version": "1.0",
+  "status": "partially_implemented",
+  "trigger": "user request, not background daemon",
+  "default_permissions": [
+    "read-only",
+    "no cloud",
+    "no installs"
+  ],
+  "steps": [
+    {
+      "index": 1,
+      "instruction": "Confirm user consent for local hardware inspection",
+      "evidence_required": true
+    },
+    {
+      "index": 2,
+      "instruction": "Read Node host profile and mark accelerators unknown",
+      "evidence_required": true
+    },
+    {
+      "index": 3,
+      "instruction": "Record platform/Node versions",
+      "evidence_required": true
+    },
+    {
+      "index": 4,
+      "instruction": "Report measurable versus unmeasured signals",
+      "evidence_required": true
+    }
+  ],
+  "human_approval": "Any external/network writes, install, model download, elevated access, hosted operation",
+  "outcome_statuses": [
+    "observed",
+    "heuristic",
+    "not_run",
+    "unknown",
+    "blocked"
+  ]
+}

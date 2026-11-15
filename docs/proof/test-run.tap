@@ -1,0 +1,742 @@
+TAP version 13
+# Subtest: hardware profile is sealed and exposes measured source
+ok 1 - hardware profile is sealed and exposes measured source
+  ---
+  duration_ms: 2.5869
+  type: 'test'
+  ...
+# Subtest: hardware profile does not infer GPU from architecture
+ok 2 - hardware profile does not infer GPU from architecture
+  ---
+  duration_ms: 0.1173
+  type: 'test'
+  ...
+# Subtest: hardware doctor safely handles missing CPU list
+ok 3 - hardware doctor safely handles missing CPU list
+  ---
+  duration_ms: 0.3537
+  type: 'test'
+  ...
+# Subtest: missing runtime binaries are not reported installed
+ok 4 - missing runtime binaries are not reported installed
+  ---
+  duration_ms: 0.083
+  type: 'test'
+  ...
+# Subtest: model fit heuristic is clearly marked
+ok 5 - model fit heuristic is clearly marked
+  ---
+  duration_ms: 0.4033
+  type: 'test'
+  ...
+# Subtest: small model maybe fits but does not guarantee
+ok 6 - small model maybe fits but does not guarantee
+  ---
+  duration_ms: 0.308
+  type: 'test'
+  ...
+# Subtest: large model insufficient RAM
+ok 7 - large model insufficient RAM
+  ---
+  duration_ms: 0.152
+  type: 'test'
+  ...
+# Subtest: explicit KV cache is included
+ok 8 - explicit KV cache is included
+  ---
+  duration_ms: 0.2611
+  type: 'test'
+  ...
+# Subtest: missing KV cache remains unknown
+ok 9 - missing KV cache remains unknown
+  ---
+  duration_ms: 0.5893
+  type: 'test'
+  ...
+# Subtest: model with negative parameters is rejected
+ok 10 - model with negative parameters is rejected
+  ---
+  duration_ms: 0.2692
+  type: 'test'
+  ...
+# Subtest: model with invalid bits is rejected
+ok 11 - model with invalid bits is rejected
+  ---
+  duration_ms: 0.0842
+  type: 'test'
+  ...
+# Subtest: unbounded context rejected
+ok 12 - unbounded context rejected
+  ---
+  duration_ms: 0.0746
+  type: 'test'
+  ...
+# Subtest: unknown free RAM rejected
+ok 13 - unknown free RAM rejected
+  ---
+  duration_ms: 0.0681
+  type: 'test'
+  ...
+# Subtest: catalog limit enforced
+ok 14 - catalog limit enforced
+  ---
+  duration_ms: 0.1277
+  type: 'test'
+  ...
+# Subtest: catalog seals results
+ok 15 - catalog seals results
+  ---
+  duration_ms: 0.2468
+  type: 'test'
+  ...
+# Subtest: numeric validation rejects NaN
+ok 16 - numeric validation rejects NaN
+  ---
+  duration_ms: 0.0533
+  type: 'test'
+  ...
+# Subtest: numeric validation rejects outside range
+ok 17 - numeric validation rejects outside range
+  ---
+  duration_ms: 0.0376
+  type: 'test'
+  ...
+# Subtest: summary includes actual count
+ok 18 - summary includes actual count
+  ---
+  duration_ms: 0.3617
+  type: 'test'
+  ...
+# Subtest: summary median accurate
+ok 19 - summary median accurate
+  ---
+  duration_ms: 0.0518
+  type: 'test'
+  ...
+# Subtest: empty summary rejected
+ok 20 - empty summary rejected
+  ---
+  duration_ms: 0.0423
+  type: 'test'
+  ...
+# Subtest: evidence seal validates
+ok 21 - evidence seal validates
+  ---
+  duration_ms: 0.0747
+  type: 'test'
+  ...
+# Subtest: tampered report seal fails
+ok 22 - tampered report seal fails
+  ---
+  duration_ms: 0.0786
+  type: 'test'
+  ...
+# Subtest: report missing seal fails
+ok 23 - report missing seal fails
+  ---
+  duration_ms: 0.2118
+  type: 'test'
+  ...
+# Subtest: canonical seal stable under key reorder
+ok 24 - canonical seal stable under key reorder
+  ---
+  duration_ms: 0.1809
+  type: 'test'
+  ...
+# Subtest: password/secret redaction
+ok 25 - password/secret redaction
+  ---
+  duration_ms: 0.2546
+  type: 'test'
+  ...
+# Subtest: allowed IPv4 loopback
+ok 26 - allowed IPv4 loopback
+  ---
+  duration_ms: 0.2123
+  type: 'test'
+  ...
+# Subtest: allowed IPv6 loopback
+ok 27 - allowed IPv6 loopback
+  ---
+  duration_ms: 0.2064
+  type: 'test'
+  ...
+# Subtest: remote/unsafe endpoint blocked: https://127.0.0.1:11434/
+ok 28 - remote/unsafe endpoint blocked: https://127.0.0.1:11434/
+  ---
+  duration_ms: 0.1629
+  type: 'test'
+  ...
+# Subtest: remote/unsafe endpoint blocked: http://example.com:11434/
+ok 29 - remote/unsafe endpoint blocked: http://example.com:11434/
+  ---
+  duration_ms: 0.0476
+  type: 'test'
+  ...
+# Subtest: remote/unsafe endpoint blocked: http://127.0.0.2:11434/
+ok 30 - remote/unsafe endpoint blocked: http://127.0.0.2:11434/
+  ---
+  duration_ms: 0.032
+  type: 'test'
+  ...
+# Subtest: remote/unsafe endpoint blocked: http://169.254.169.254/
+ok 31 - remote/unsafe endpoint blocked: http://169.254.169.254/
+  ---
+  duration_ms: 0.0278
+  type: 'test'
+  ...
+# Subtest: remote/unsafe endpoint blocked: http://user:pass@127.0.0.1/
+ok 32 - remote/unsafe endpoint blocked: http://user:pass@127.0.0.1/
+  ---
+  duration_ms: 0.0418
+  type: 'test'
+  ...
+# Subtest: remote/unsafe endpoint blocked: http://127.0.0.1:11434/a
+ok 33 - remote/unsafe endpoint blocked: http://127.0.0.1:11434/a
+  ---
+  duration_ms: 0.0927
+  type: 'test'
+  ...
+# Subtest: remote/unsafe endpoint blocked: http://127.0.0.1/?a=1
+ok 34 - remote/unsafe endpoint blocked: http://127.0.0.1/?a=1
+  ---
+  duration_ms: 0.0394
+  type: 'test'
+  ...
+# Subtest: remote/unsafe endpoint blocked: http://localhost:11434/a
+ok 35 - remote/unsafe endpoint blocked: http://localhost:11434/a
+  ---
+  duration_ms: 0.0309
+  type: 'test'
+  ...
+# Subtest: runtime endpoint maps Ollama tags
+ok 36 - runtime endpoint maps Ollama tags
+  ---
+  duration_ms: 0.1373
+  type: 'test'
+  ...
+# Subtest: runtime endpoint maps llama health
+ok 37 - runtime endpoint maps llama health
+  ---
+  duration_ms: 0.0961
+  type: 'test'
+  ...
+# Subtest: invalid runtime refused
+ok 38 - invalid runtime refused
+  ---
+  duration_ms: 0.2494
+  type: 'test'
+  ...
+# Subtest: Ollama probe succeeds against fake response
+ok 39 - Ollama probe succeeds against fake response
+  ---
+  duration_ms: 4.0725
+  type: 'test'
+  ...
+# Subtest: Ollama probe does not equate model listing to inference
+ok 40 - Ollama probe does not equate model listing to inference
+  ---
+  duration_ms: 0.6598
+  type: 'test'
+  ...
+# Subtest: llama probe health ready
+ok 41 - llama probe health ready
+  ---
+  duration_ms: 0.483
+  type: 'test'
+  ...
+# Subtest: llama probe loading
+ok 42 - llama probe loading
+  ---
+  duration_ms: 0.3961
+  type: 'test'
+  ...
+# Subtest: Ollama malformed body cannot pass
+ok 43 - Ollama malformed body cannot pass
+  ---
+  duration_ms: 0.6737
+  type: 'test'
+  ...
+# Subtest: unreachable loopback reported missing
+ok 44 - unreachable loopback reported missing
+  ---
+  duration_ms: 0.4179
+  type: 'test'
+  ...
+# Subtest: redirect is never opted into
+ok 45 - redirect is never opted into
+  ---
+  duration_ms: 0.4704
+  type: 'test'
+  ...
+# Subtest: remote Ollama probe blocked before any fetch
+ok 46 - remote Ollama probe blocked before any fetch
+  ---
+  duration_ms: 0.2843
+  type: 'test'
+  ...
+# Subtest: oversized payload refused
+ok 47 - oversized payload refused
+  ---
+  duration_ms: 1.0644
+  type: 'test'
+  ...
+# Subtest: infer Ollama uses local opts and excludes prompts from report
+ok 48 - infer Ollama uses local opts and excludes prompts from report
+  ---
+  duration_ms: 1.3304
+  type: 'test'
+  ...
+# Subtest: inference rejects remote endpoint
+ok 49 - inference rejects remote endpoint
+  ---
+  duration_ms: 0.2265
+  type: 'test'
+  ...
+# Subtest: inference requires installed model name
+ok 50 - inference requires installed model name
+  ---
+  duration_ms: 0.0855
+  type: 'test'
+  ...
+# Subtest: inference runs bounded
+ok 51 - inference runs bounded
+  ---
+  duration_ms: 0.2019
+  type: 'test'
+  ...
+# Subtest: inference prompt bounded
+ok 52 - inference prompt bounded
+  ---
+  duration_ms: 0.1335
+  type: 'test'
+  ...
+# Subtest: failed inference does not generate fake samples
+ok 53 - failed inference does not generate fake samples
+  ---
+  duration_ms: 0.5727
+  type: 'test'
+  ...
+# Subtest: synthetic benchmark has real timing samples
+ok 54 - synthetic benchmark has real timing samples
+  ---
+  duration_ms: 1.124
+  type: 'test'
+  ...
+# Subtest: benchmark work deterministic
+ok 55 - benchmark work deterministic
+  ---
+  duration_ms: 0.1601
+  type: 'test'
+  ...
+# Subtest: benchmark runs bounded
+ok 56 - benchmark runs bounded
+  ---
+  duration_ms: 0.1398
+  type: 'test'
+  ...
+# Subtest: benchmark workload bounded
+ok 57 - benchmark workload bounded
+  ---
+  duration_ms: 0.2948
+  type: 'test'
+  ...
+# Subtest: comparability requires same workload
+ok 58 - comparability requires same workload
+  ---
+  duration_ms: 0.5387
+  type: 'test'
+  ...
+# Subtest: comparison of same work labeled caveated
+ok 59 - comparison of same work labeled caveated
+  ---
+  duration_ms: 0.3663
+  type: 'test'
+  ...
+# Subtest: privacy audit does not claim runtime egress safe
+ok 60 - privacy audit does not claim runtime egress safe
+  ---
+  duration_ms: 0.2256
+  type: 'test'
+  ...
+# Subtest: privacy rejects remote endpoint
+ok 61 - privacy rejects remote endpoint
+  ---
+  duration_ms: 0.1524
+  type: 'test'
+  ...
+# Subtest: privacy allows loopback without network request
+ok 62 - privacy allows loopback without network request
+  ---
+  duration_ms: 0.1602
+  type: 'test'
+  ...
+# Subtest: HTML report escapes unsafe content
+ok 63 - HTML report escapes unsafe content
+  ---
+  duration_ms: 0.9945
+  type: 'test'
+  ...
+# Subtest: Report provides three formats
+ok 64 - Report provides three formats
+  ---
+  duration_ms: 0.5694
+  type: 'test'
+  ...
+# Subtest: loadJSON requires regular file
+ok 65 - loadJSON requires regular file
+  ---
+  duration_ms: 245.4754
+  type: 'test'
+  ...
+# Subtest: bounded JSON import rejects giant file
+ok 66 - bounded JSON import rejects giant file
+  ---
+  duration_ms: 14.6422
+  type: 'test'
+  ...
+# Subtest: project-local skills install: claude
+ok 67 - project-local skills install: claude
+  ---
+  duration_ms: 141.2609
+  type: 'test'
+  ...
+# Subtest: project-local skills install: cursor
+ok 68 - project-local skills install: cursor
+  ---
+  duration_ms: 125.4095
+  type: 'test'
+  ...
+# Subtest: project-local skills install: codex
+ok 69 - project-local skills install: codex
+  ---
+  duration_ms: 114.4767
+  type: 'test'
+  ...
+# Subtest: project-local skills install: gemini
+ok 70 - project-local skills install: gemini
+  ---
+  duration_ms: 140.3683
+  type: 'test'
+  ...
+# Subtest: project-local skills install: copilot
+ok 71 - project-local skills install: copilot
+  ---
+  duration_ms: 103.6828
+  type: 'test'
+  ...
+# Subtest: project-local skills install: opencode
+ok 72 - project-local skills install: opencode
+  ---
+  duration_ms: 115.689
+  type: 'test'
+  ...
+# Subtest: installer rejects invalid IDE
+ok 73 - installer rejects invalid IDE
+  ---
+  duration_ms: 0.4565
+  type: 'test'
+  ...
+# Subtest: installer refuses symlink project root
+ok 74 - installer refuses symlink project root
+  ---
+  duration_ms: 5.2201
+  type: 'test'
+  ...
+# Subtest: installer refuses to overwrite existing skill file
+ok 75 - installer refuses to overwrite existing skill file
+  ---
+  duration_ms: 95.6729
+  type: 'test'
+  ...
+# Subtest: server requires a token
+ok 76 - server requires a token
+  ---
+  duration_ms: 0.4266
+  type: 'test'
+  ...
+# Subtest: server rejects non-report files
+ok 77 - server rejects non-report files
+  ---
+  duration_ms: 0.7733
+  type: 'test'
+  ...
+# Subtest: server bearer-protected on loopback, no writes
+ok 78 - server bearer-protected on loopback, no writes
+  ---
+  duration_ms: 61.5994
+  type: 'test'
+  ...
+# Subtest: manifest includes 20 roles and 25 skills
+ok 79 - manifest includes 20 roles and 25 skills
+  ---
+  duration_ms: 1.471
+  type: 'test'
+  ...
+# Subtest: eight workflows and ten rule docs
+ok 80 - eight workflows and ten rule docs
+  ---
+  duration_ms: 0.813
+  type: 'test'
+  ...
+# Subtest: installer refuses nested project symlink escape
+ok 81 - installer refuses nested project symlink escape
+  ---
+  duration_ms: 13.4942
+  type: 'test'
+  ...
+# Subtest: server rejects tampered sealed report
+ok 82 - server rejects tampered sealed report
+  ---
+  duration_ms: 15.0519
+  type: 'test'
+  ...
+# Subtest: actual loopback Ollama probe against mock service
+ok 83 - actual loopback Ollama probe against mock service
+  ---
+  duration_ms: 10.7599
+  type: 'test'
+  ...
+# Subtest: actual loopback llama health against mock service
+ok 84 - actual loopback llama health against mock service
+  ---
+  duration_ms: 8.7407
+  type: 'test'
+  ...
+# Subtest: package.json version equals VERSION and package is publishable
+ok 85 - package.json version equals VERSION and package is publishable
+  ---
+  duration_ms: 5.6146
+  type: 'test'
+  ...
+# Subtest: every skill folder has frontmatter whose name equals the folder and is listed in the manifest
+ok 86 - every skill folder has frontmatter whose name equals the folder and is listed in the manifest
+  ---
+  duration_ms: 13.833
+  type: 'test'
+  ...
+# Subtest: WSL is detected from the kernel release string, not guessed
+ok 87 - WSL is detected from the kernel release string, not guessed
+  ---
+  duration_ms: 1.2577
+  type: 'test'
+  ...
+# Subtest: unreadable disk reports unknown, never zero
+ok 88 - unreadable disk reports unknown, never zero
+  ---
+  duration_ms: 0.3684
+  type: 'test'
+  ...
+# Subtest: nvidia-smi parser: valid multi-GPU output
+ok 89 - nvidia-smi parser: valid multi-GPU output
+  ---
+  duration_ms: 0.5251
+  type: 'test'
+  ...
+# Subtest: nvidia-smi parser rejects: null
+ok 90 - nvidia-smi parser rejects: null
+  ---
+  duration_ms: 0.1057
+  type: 'test'
+  ...
+# Subtest: nvidia-smi parser rejects: ""
+ok 91 - nvidia-smi parser rejects: ""
+  ---
+  duration_ms: 0.0874
+  type: 'test'
+  ...
+# Subtest: nvidia-smi parser rejects: "   "
+ok 92 - nvidia-smi parser rejects: "   "
+  ---
+  duration_ms: 0.1256
+  type: 'test'
+  ...
+# Subtest: nvidia-smi parser rejects: "Failed to initialize NVML"
+ok 93 - nvidia-smi parser rejects: "Failed to initialize NVML"
+  ---
+  duration_ms: 0.106
+  type: 'test'
+  ...
+# Subtest: nvidia-smi parser rejects: "a,b,c"
+ok 94 - nvidia-smi parser rejects: "a,b,c"
+  ---
+  duration_ms: 0.1756
+  type: 'test'
+  ...
+# Subtest: nvidia-smi parser rejects: "GPU, 8192"
+ok 95 - nvidia-smi parser rejects: "GPU, 8192"
+  ---
+  duration_ms: 0.1023
+  type: 'test'
+  ...
+# Subtest: nvidia-smi parser rejects: "GPU, 8192, 1.0, extra"
+ok 96 - nvidia-smi parser rejects: "GPU, 8192, 1.0, extra"
+  ---
+  duration_ms: 0.0701
+  type: 'test'
+  ...
+# Subtest: nvidia-smi parser rejects: "<img src=x>, 8192, 1.0"
+ok 97 - nvidia-smi parser rejects: "<img src=x>, 8192, 1.0"
+  ---
+  duration_ms: 0.0818
+  type: 'test'
+  ...
+# Subtest: nvidia-smi parser rejects: "GPU, -5, 1.0"
+ok 98 - nvidia-smi parser rejects: "GPU, -5, 1.0"
+  ---
+  duration_ms: 0.0724
+  type: 'test'
+  ...
+# Subtest: nvidia-smi parser rejects: "GPU, 8192, $(whoami)"
+ok 99 - nvidia-smi parser rejects: "GPU, 8192, $(whoami)"
+  ---
+  duration_ms: 0.0626
+  type: 'test'
+  ...
+# Subtest: VRAM fit is evaluated only when a GPU was really detected
+ok 100 - VRAM fit is evaluated only when a GPU was really detected
+  ---
+  duration_ms: 0.7838
+  type: 'test'
+  ...
+# Subtest: model descriptor strings are sanitised
+ok 101 - model descriptor strings are sanitised
+  ---
+  duration_ms: 0.3547
+  type: 'test'
+  ...
+# Subtest: failure classification covers each code
+ok 102 - failure classification covers each code
+  ---
+  duration_ms: 0.4328
+  type: 'test'
+  ...
+# Subtest: probe against a real loopback server that redirects, times out and sends junk
+ok 103 - probe against a real loopback server that redirects, times out and sends junk
+  ---
+  duration_ms: 227.0774
+  type: 'test'
+  ...
+# Subtest: installer dry-run lists files and writes nothing; plan covers 25 skills
+ok 104 - installer dry-run lists files and writes nothing; plan covers 25 skills
+  ---
+  duration_ms: 28.8339
+  type: 'test'
+  ...
+# Subtest: installer rejects prototype-key IDE names
+ok 105 - installer rejects prototype-key IDE names
+  ---
+  duration_ms: 0.6932
+  type: 'test'
+  ...
+# Subtest: installed skills are byte-identical to canonical sources
+ok 106 - installed skills are byte-identical to canonical sources
+  ---
+  duration_ms: 107.7388
+  type: 'test'
+  ...
+# Subtest: canonical() ignores undefined members so seals survive JSON round-trip
+ok 107 - canonical() ignores undefined members so seals survive JSON round-trip
+  ---
+  duration_ms: 0.4354
+  type: 'test'
+  ...
+# Subtest: redaction covers common token shapes
+ok 108 - redaction covers common token shapes
+  ---
+  duration_ms: 0.124
+  type: 'test'
+  ...
+# Subtest: markdownSafe escapes pipes, strips controls and bidi overrides
+ok 109 - markdownSafe escapes pipes, strips controls and bidi overrides
+  ---
+  duration_ms: 0.1277
+  type: 'test'
+  ...
+# Subtest: IPv6 and obfuscated loopback forms that must be refused
+ok 110 - IPv6 and obfuscated loopback forms that must be refused
+  ---
+  duration_ms: 0.2034
+  type: 'test'
+  ...
+# Subtest: CLI argument parser: booleans, duplicates, missing values
+ok 111 - CLI argument parser: booleans, duplicates, missing values
+  ---
+  duration_ms: 0.5917
+  type: 'test'
+  ...
+# Subtest: every report schema renders valid JSON, Markdown and HTML without raw markup
+ok 112 - every report schema renders valid JSON, Markdown and HTML without raw markup
+  ---
+  duration_ms: 1001.0593
+  type: 'test'
+  ...
+# Subtest: audit: all assurance checks pass, verdict is consistent, live inference stays not-run
+ok 113 - audit: all assurance checks pass, verdict is consistent, live inference stays not-run
+  ---
+  duration_ms: 953.212
+  type: 'test'
+  ...
+# Subtest: audit negative control: a broken safety gate makes the verdict BLOCKED_UNSAFE
+ok 114 - audit negative control: a broken safety gate makes the verdict BLOCKED_UNSAFE
+  ---
+  duration_ms: 3387.4671
+  type: 'test'
+  ...
+# Subtest: CLI: --version, help, unknown command, bad option
+ok 115 - CLI: --version, help, unknown command, bad option
+  ---
+  duration_ms: 5438.3131
+  type: 'test'
+  ...
+# Subtest: CLI: audit writes JSON, MD and HTML, refuses overwrite, honours --force, verify detects tamper
+ok 116 - CLI: audit writes JSON, MD and HTML, refuses overwrite, honours --force, verify detects tamper
+  ---
+  duration_ms: 12356.7217
+  type: 'test'
+  ...
+# Subtest: CLI: doctor, fit, probe, benchmark, privacy run offline and respect --format
+ok 117 - CLI: doctor, fit, probe, benchmark, privacy run offline and respect --format
+  ---
+  duration_ms: 7595.6994
+  type: 'test'
+  ...
+# Subtest: CLI: install-skills --dry-run works and does not touch disk
+ok 118 - CLI: install-skills --dry-run works and does not touch disk
+  ---
+  duration_ms: 1054.0188
+  type: 'test'
+  ...
+# Subtest: seeded fuzz: hostile catalog and model values never crash with a non-Error
+ok 119 - seeded fuzz: hostile catalog and model values never crash with a non-Error
+  ---
+  duration_ms: 64.6931
+  type: 'test'
+  ...
+# Subtest: canonical is deterministic across key order and nesting
+ok 120 - canonical is deterministic across key order and nesting
+  ---
+  duration_ms: 0.2687
+  type: 'test'
+  ...
+# Subtest: privacy audit inventory states prompts and responses are not stored
+ok 121 - privacy audit inventory states prompts and responses are not stored
+  ---
+  duration_ms: 0.3489
+  type: 'test'
+  ...
+# Subtest: fitCatalog summary adds up
+ok 122 - fitCatalog summary adds up
+  ---
+  duration_ms: 0.4944
+  type: 'test'
+  ...
+1..122
+# tests 122
+# suites 0
+# pass 122
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 33214.7137

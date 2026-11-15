@@ -1,0 +1,41 @@
+{
+  "name": "evidence-release-gate",
+  "version": "1.0",
+  "status": "partially_implemented",
+  "trigger": "user request, not background daemon",
+  "default_permissions": [
+    "read-only",
+    "no cloud",
+    "no installs"
+  ],
+  "steps": [
+    {
+      "index": 1,
+      "instruction": "Run unit/security/fixture tests",
+      "evidence_required": true
+    },
+    {
+      "index": 2,
+      "instruction": "Review actual observed hardware/runtime status",
+      "evidence_required": true
+    },
+    {
+      "index": 3,
+      "instruction": "Reject inferred speed/energy/quality claims",
+      "evidence_required": true
+    },
+    {
+      "index": 4,
+      "instruction": "Publish status table with untested and approvals",
+      "evidence_required": true
+    }
+  ],
+  "human_approval": "Any external/network writes, install, model download, elevated access, hosted operation",
+  "outcome_statuses": [
+    "observed",
+    "heuristic",
+    "not_run",
+    "unknown",
+    "blocked"
+  ]
+}

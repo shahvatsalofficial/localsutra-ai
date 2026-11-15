@@ -1,0 +1,13 @@
+LocalSutra AI
+Copyright 2026 Vatsal Shah
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+This product includes no third-party code, model weights or datasets. It has zero
+runtime dependencies (Node.js built-ins only). Fixtures under fixtures/ are synthetic,
+written for this project and are not verified model requirements or download recommendations.
+
+Third-party names (Ollama, llama.cpp, NVIDIA, ONNX Runtime, Claude, Anthropic, Cursor, Codex,
+OpenAI, GitHub, GitHub Copilot, Gemini, Google, OpenCode, Node.js, npm) are trademarks of
+their respective owners and are used only to describe compatibility targets. No affiliation
+or endorsement is implied.

@@ -1,0 +1,37 @@
+# LocalSutra AI — Privacy and Offline-Boundary Check
+
+**Schema:** localsutra.privacy.v1  
+**Integrity:** SHA-256 seal verified (209bd2ec2b239594…)  
+**Trust boundary:** Loopback only. No cloud calls, no telemetry. Unknown and not-run values are not successes.  
+
+> **Verdict: ENDPOINT_ALLOWED** — Only an explicit loopback endpoint is permitted; no network request was performed by this audit.
+
+## Claims
+
+| Claim | Value |
+|---|---|
+| coreHasNoMandatoryCloudApiKey | true |
+| remoteEndpointBlockedByValidation | true |
+| modelRuntimeEgress | not_tested |
+| modelRuntimeTelemetry | not_tested |
+
+## Data inventory
+
+| Field | Stored in | Retention | Shared |
+|---|---|---|---|
+| OS, architecture, CPU model/count, RAM total/free | report files you choose to write | until you delete the file | never automatically |
+| GPU name, VRAM, driver (only if nvidia-smi is present) | report files you choose to write | until you delete the file | never automatically |
+| Free disk space of the working-directory volume | report files you choose to write | until you delete the file | never automatically |
+| Model ids from your catalog or a local Ollama /api/tags listing | report files you choose to write | until you delete the file | never automatically |
+| Prompt hash (SHA-256) for opt-in inference | inference report | until you delete the file | never automatically |
+| Prompt and response text | not stored | none | never |
+
+## Notes
+
+- External runtimes may use their own network features
+- For air-gap claims, use external network monitoring and disconnect tests
+- This audit does not establish compliance or end-to-end encryption
+- Hardware profile, model list and file names can be sensitive: review reports before sharing
+
+---
+LocalSutra AI 0.2.0 · created by Vatsal Shah · Apache-2.0

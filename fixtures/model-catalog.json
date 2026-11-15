@@ -1,0 +1,9 @@
+{
+  "schema":"localsutra.catalog-fixture.v1",
+  "notice":"Synthetic illustrative descriptors; not verified download recommendations or authoritative model hardware requirements.",
+  "models":[
+    {"id":"EXAMPLE-3B-Q4","parametersB":3,"bitsPerWeight":4,"extraOverheadGB":1.1,"contextTokens":4096},
+    {"id":"EXAMPLE-7B-Q4","parametersB":7,"bitsPerWeight":4,"extraOverheadGB":1.5,"contextTokens":4096},
+    {"id":"EXAMPLE-8B-Q8","parametersB":8,"bitsPerWeight":8,"extraOverheadGB":2,"contextTokens":8192}
+  ]
+}

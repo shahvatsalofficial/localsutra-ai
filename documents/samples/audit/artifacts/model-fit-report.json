@@ -1,0 +1,158 @@
+{
+  "schema": "localsutra.catalog.v1",
+  "summary": {
+    "total": 3,
+    "possiblyFits": 2,
+    "likelyInsufficient": 1
+  },
+  "results": [
+    {
+      "schema": "localsutra.fit.v1",
+      "model": {
+        "id": "EXAMPLE-3B-Q4",
+        "parametersB": 3,
+        "bitsPerWeight": 4,
+        "contextTokens": 4096,
+        "license": "unknown",
+        "source": "unspecified"
+      },
+      "hardware": {
+        "os": "linux",
+        "architecture": "x64",
+        "freeRamGB": 8,
+        "gpuStatus": "unknown"
+      },
+      "estimate": {
+        "weightsGB": 1.5,
+        "kvCacheGB": null,
+        "overheadGB": 1.1,
+        "multiplier": 1.35,
+        "estimatedRequiredGB": 3.1250000000000004,
+        "fitCategory": "possibly_fits",
+        "kind": "heuristic_not_measured",
+        "vram": {
+          "status": "not_evaluated",
+          "reason": "GPU status is unknown"
+        },
+        "gpuOffloading": "not_evaluated",
+        "speed": "unknown",
+        "modelQuality": "unknown",
+        "assumptions": [
+          "required = weights x headroom + overhead + KV cache (if supplied)",
+          "Headroom multiplier and fixed overhead are assumptions, not measurements",
+          "Download size is not runtime resident memory"
+        ]
+      },
+      "limitations": [
+        "A static fit estimate is not a load, compatibility or performance guarantee",
+        "KV cache is omitted unless kvBytesPerToken is supplied",
+        "Fragmentation, runtime implementation, quantisation format and acceleration must be checked separately",
+        "Model license and source are copied from the supplied descriptor and are not verified"
+      ],
+      "evidence": {
+        "algorithm": "sha256",
+        "sha256": "85e453d788b3af0340f392f60f06f654e321b29e7c5b4d15da4172559b6ae0c8"
+      }
+    },
+    {
+      "schema": "localsutra.fit.v1",
+      "model": {
+        "id": "EXAMPLE-7B-Q4",
+        "parametersB": 7,
+        "bitsPerWeight": 4,
+        "contextTokens": 4096,
+        "license": "unknown",
+        "source": "unspecified"
+      },
+      "hardware": {
+        "os": "linux",
+        "architecture": "x64",
+        "freeRamGB": 8,
+        "gpuStatus": "unknown"
+      },
+      "estimate": {
+        "weightsGB": 3.5,
+        "kvCacheGB": null,
+        "overheadGB": 1.5,
+        "multiplier": 1.35,
+        "estimatedRequiredGB": 6.2250000000000005,
+        "fitCategory": "possibly_fits",
+        "kind": "heuristic_not_measured",
+        "vram": {
+          "status": "not_evaluated",
+          "reason": "GPU status is unknown"
+        },
+        "gpuOffloading": "not_evaluated",
+        "speed": "unknown",
+        "modelQuality": "unknown",
+        "assumptions": [
+          "required = weights x headroom + overhead + KV cache (if supplied)",
+          "Headroom multiplier and fixed overhead are assumptions, not measurements",
+          "Download size is not runtime resident memory"
+        ]
+      },
+      "limitations": [
+        "A static fit estimate is not a load, compatibility or performance guarantee",
+        "KV cache is omitted unless kvBytesPerToken is supplied",
+        "Fragmentation, runtime implementation, quantisation format and acceleration must be checked separately",
+        "Model license and source are copied from the supplied descriptor and are not verified"
+      ],
+      "evidence": {
+        "algorithm": "sha256",
+        "sha256": "0a858a104c037b6b3489d51c1b73e8d94951099dabade24305e56b43c042df99"
+      }
+    },
+    {
+      "schema": "localsutra.fit.v1",
+      "model": {
+        "id": "EXAMPLE-8B-Q8",
+        "parametersB": 8,
+        "bitsPerWeight": 8,
+        "contextTokens": 8192,
+        "license": "unknown",
+        "source": "unspecified"
+      },
+      "hardware": {
+        "os": "linux",
+        "architecture": "x64",
+        "freeRamGB": 8,
+        "gpuStatus": "unknown"
+      },
+      "estimate": {
+        "weightsGB": 8,
+        "kvCacheGB": null,
+        "overheadGB": 2,
+        "multiplier": 1.35,
+        "estimatedRequiredGB": 12.8,
+        "fitCategory": "likely_insufficient_ram",
+        "kind": "heuristic_not_measured",
+        "vram": {
+          "status": "not_evaluated",
+          "reason": "GPU status is unknown"
+        },
+        "gpuOffloading": "not_evaluated",
+        "speed": "unknown",
+        "modelQuality": "unknown",
+        "assumptions": [
+          "required = weights x headroom + overhead + KV cache (if supplied)",
+          "Headroom multiplier and fixed overhead are assumptions, not measurements",
+          "Download size is not runtime resident memory"
+        ]
+      },
+      "limitations": [
+        "A static fit estimate is not a load, compatibility or performance guarantee",
+        "KV cache is omitted unless kvBytesPerToken is supplied",
+        "Fragmentation, runtime implementation, quantisation format and acceleration must be checked separately",
+        "Model license and source are copied from the supplied descriptor and are not verified"
+      ],
+      "evidence": {
+        "algorithm": "sha256",
+        "sha256": "e7a138594ff2d0f99f7a451494ba4b896d0dbd0e757c53be6fa3baee9f01b580"
+      }
+    }
+  ],
+  "evidence": {
+    "algorithm": "sha256",
+    "sha256": "7cf376f59332d1ca5bb1f39dda03062a3e10fddd41052502046dc261093cb079"
+  }
+}

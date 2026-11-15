@@ -1,0 +1,40 @@
+$ localsutra install-skills --project C:\Users\VATSAL~1\AppData\Local\Temp --ide claude --dry-run
+(exit 0)
+
+{
+  "ide": "claude",
+  "project": "C:\\Users\\Vatsal Shah\\AppData\\Local\\Temp",
+  "target": ".claude/skills",
+  "dryRun": true,
+  "planned": 25,
+  "written": 0,
+  "skipped": 0,
+  "files": [
+    ".claude/skills/localsutra-benchmark-lab/SKILL.md",
+    ".claude/skills/localsutra-compatibility-bridge/SKILL.md",
+    ".claude/skills/localsutra-evidence-ledger/SKILL.md",
+    ".claude/skills/localsutra-hardware-atlas/SKILL.md",
+    ".claude/skills/localsutra-hardware-discovery/SKILL.md",
+    ".claude/skills/localsutra-ide-bridge/SKILL.md",
+    ".claude/skills/localsutra-inference-witness/SKILL.md",
+    ".claude/skills/localsutra-install-steward/SKILL.md",
+    ".claude/skills/localsutra-memory-guardian/SKILL.md",
+    ".claude/skills/localsutra-model-fit/SKILL.md",
+    ".claude/skills/localsutra-model-fit-navigator/SKILL.md",
+    ".claude/skills/localsutra-model-provenance/SKILL.md",
+    ".claude/skills/localsutra-offline-proof/SKILL.md",
+    ".claude/skills/localsutra-offline-verification/SKILL.md",
+    ".claude/skills/localsutra-port-boundary/SKILL.md",
+    ".claude/skills/localsutra-prime/SKILL.md",
+    ".claude/skills/localsutra-privacy-firewall/SKILL.md",
+    ".claude/skills/localsutra-quantization-lens/SKILL.md",
+    ".claude/skills/localsutra-release-auditor/SKILL.md",
+    ".claude/skills/localsutra-resource-benchmark/SKILL.md",
+    ".claude/skills/localsutra-runtime-doctor/SKILL.md",
+    ".claude/skills/localsutra-runtime-health/SKILL.md",
+    ".claude/skills/localsutra-security-sentinel/SKILL.md",
+    ".claude/skills/localsutra-setup-mentor/SKILL.md",
+    ".claude/skills/localsutra-silicon-scout/SKILL.md"
+  ],
+  "hostActivation": "not_tested"
+}

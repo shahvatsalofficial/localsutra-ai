@@ -1,0 +1,26 @@
+{
+  "name": "localsutra-ai",
+  "version": "0.2.0",
+  "description": "LocalSutra AI: offline-first local AI readiness CLI. Hardware profile, model-fit estimates, Ollama/llama.cpp loopback diagnostics, honest benchmarks and an independent audit report (MD, HTML, JSON), plus 25 portable Agent Skills. No API keys, no cloud, zero dependencies.",
+  "author": {"name": "Vatsal Shah", "url": "https://github.com/shahvatsalofficial"},
+  "license": "Apache-2.0",
+  "private": false,
+  "type": "module",
+  "engines": {"node": ">=20"},
+  "bin": {"localsutra": "packages/cli/index.mjs", "localsutra-ai": "packages/cli/index.mjs"},
+  "scripts": {
+    "test": "node scripts/run-tests.mjs",
+    "doctor": "node packages/cli/index.mjs doctor",
+    "demo": "node scripts/demo.mjs",
+    "audit": "node packages/cli/index.mjs audit --out examples/audit --force",
+    "pack:check": "npm pack --dry-run",
+    "proof": "node scripts/proof.mjs",
+    "help": "node packages/cli/index.mjs help"
+  },
+  "homepage": "https://github.com/shahvatsalofficial/localsutra-ai#readme",
+  "repository": {"type": "git", "url": "git+https://github.com/shahvatsalofficial/localsutra-ai.git"},
+  "bugs": {"url": "https://github.com/shahvatsalofficial/localsutra-ai/issues"},
+  "keywords": ["local-ai", "local-llm", "ollama", "llama.cpp", "gguf", "model-fit", "can-i-run-this-model", "vram", "hardware-profile", "benchmark", "privacy", "offline", "agent-skills", "claude-code", "cursor", "codex", "github-copilot", "gemini-cli", "cli", "audit", "evidence"],
+  "files": ["packages", "skills", "agents", ".claude/agents", "fixtures", "schemas", "rules", "policies", "workflows", "docs", "examples", "scripts/install.sh", "scripts/install.ps1", "scripts/install.cmd", "README.md", "LICENSE", "NOTICE", "CHANGELOG.md", "SECURITY.md", "llms.txt"],
+  "publishConfig": {"access": "public", "provenance": true}
+}

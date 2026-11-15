@@ -1,0 +1,89 @@
+{
+  "schema": "localsutra.benchmark.v1",
+  "type": "synthetic_cpu_workload_not_ai_inference",
+  "runs": 5,
+  "iterations": 50000,
+  "warmupDiscarded": true,
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "statistics": {
+    "wallMs": {
+      "samples": 5,
+      "mean": 0.65362,
+      "median": 0.294,
+      "p95": 1.3897,
+      "min": 0.2718,
+      "max": 1.3897,
+      "stdev": 0.5240088758790256
+    },
+    "cpuUserMs": {
+      "samples": 5,
+      "mean": 3,
+      "median": 0,
+      "p95": 15,
+      "min": 0,
+      "max": 15,
+      "stdev": 6.708203932499369
+    },
+    "rssBytes": {
+      "samples": 5,
+      "mean": 70930432,
+      "median": 70942720,
+      "p95": 70950912,
+      "min": 70873088,
+      "max": 70950912,
+      "stdev": 32251.93625195238
+    }
+  },
+  "samples": [
+    {
+      "wallMs": 1.3897,
+      "cpuUserMs": 15,
+      "cpuSystemMs": 16,
+      "processRssBytes": 70873088,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 1.0314,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 70942720,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 0.2718,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 70942720,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 0.2812,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 70942720,
+      "checksum": 35980960
+    },
+    {
+      "wallMs": 0.294,
+      "cpuUserMs": 0,
+      "cpuSystemMs": 0,
+      "processRssBytes": 70950912,
+      "checksum": 35980960
+    }
+  ],
+  "limits": [
+    "Not an LLM or runtime benchmark",
+    "Process RSS is not GPU VRAM",
+    "Host load and thermal state affect results",
+    "No power, energy or model quality measured",
+    "Small sample counts give wide uncertainty; see stdev"
+  ],
+  "evidence": {
+    "algorithm": "sha256",
+    "sha256": "f206b61a6281d4c9a554212c780c73845d145a858b8d0da18003d461117fb36b"
+  }
+}

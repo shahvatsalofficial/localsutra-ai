@@ -1,0 +1,41 @@
+{
+  "name": "privacy-assessment",
+  "version": "1.0",
+  "status": "partially_implemented",
+  "trigger": "user request, not background daemon",
+  "default_permissions": [
+    "read-only",
+    "no cloud",
+    "no installs"
+  ],
+  "steps": [
+    {
+      "index": 1,
+      "instruction": "Reject remote endpoints",
+      "evidence_required": true
+    },
+    {
+      "index": 2,
+      "instruction": "Record unresolved runtime telemetry claims",
+      "evidence_required": true
+    },
+    {
+      "index": 3,
+      "instruction": "Avoid transmitting hardware inventory or prompts",
+      "evidence_required": true
+    },
+    {
+      "index": 4,
+      "instruction": "Recommend air-gap test and external observation",
+      "evidence_required": true
+    }
+  ],
+  "human_approval": "Any external/network writes, install, model download, elevated access, hosted operation",
+  "outcome_statuses": [
+    "observed",
+    "heuristic",
+    "not_run",
+    "unknown",
+    "blocked"
+  ]
+}

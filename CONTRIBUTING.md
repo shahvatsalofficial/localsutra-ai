@@ -1,0 +1,2 @@
+# Contributing
+Start with `npm test`, `npm run demo`, and AGENTS.md. Avoid nonconsensual telemetry, secrets collection, untrusted command execution and automatic model downloads. Include negative security tests with every new integration. Issues should include redacted reproducible fixtures, operating system and Node version, expected result, actual result, and the boundaries of claims. Maintainers decide acceptance.

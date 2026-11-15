@@ -1,0 +1,41 @@
+{
+  "name": "installation-planning",
+  "version": "1.0",
+  "status": "partially_implemented",
+  "trigger": "user request, not background daemon",
+  "default_permissions": [
+    "read-only",
+    "no cloud",
+    "no installs"
+  ],
+  "steps": [
+    {
+      "index": 1,
+      "instruction": "Inspect OS and existing runtime",
+      "evidence_required": true
+    },
+    {
+      "index": 2,
+      "instruction": "Verify official download/license/compatibility metadata",
+      "evidence_required": true
+    },
+    {
+      "index": 3,
+      "instruction": "Present installer with size/permission review",
+      "evidence_required": true
+    },
+    {
+      "index": 4,
+      "instruction": "Never auto-run installers or download models",
+      "evidence_required": true
+    }
+  ],
+  "human_approval": "Any external/network writes, install, model download, elevated access, hosted operation",
+  "outcome_statuses": [
+    "observed",
+    "heuristic",
+    "not_run",
+    "unknown",
+    "blocked"
+  ]
+}

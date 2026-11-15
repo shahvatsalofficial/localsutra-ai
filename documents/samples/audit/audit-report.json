@@ -1,0 +1,354 @@
+{
+  "schema": "localsutra.audit.v1",
+  "toolVersion": "0.2.0",
+  "recordedAt": "2026-11-15T20:32:39.169Z",
+  "verdict": "APPROVED_WITH_EVIDENCE",
+  "verdictRule": "BLOCKED_UNSAFE if any safety-gate check fails; REVIEW_REQUIRED if every check passed but some were skipped on this host; APPROVED_WITH_EVIDENCE if all ran and passed. Even then this is evidence for a human reviewer, not certification, and live model inference is always listed as not tested.",
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "arch": "x64",
+    "cpuModel": "Intel(R) Core(TM) Ultra 7 155U",
+    "wsl": false
+  },
+  "assurance": {
+    "total": 37,
+    "passed": 37,
+    "failed": 0,
+    "skipped": 0,
+    "checks": [
+      {
+        "id": "A01",
+        "title": "10 non-loopback or malformed endpoints are refused",
+        "expected": "all refused",
+        "observed": "10/10 refused",
+        "result": "pass"
+      },
+      {
+        "id": "A02",
+        "title": "Blocked endpoint never reaches the network layer",
+        "expected": "fetch not called",
+        "observed": "rejected: Non-loopback runtime endpoint blocked; fetch called=false",
+        "result": "pass"
+      },
+      {
+        "id": "A03",
+        "title": "HTTP redirect from a runtime is refused, not followed",
+        "expected": "failureCode=redirect_refused",
+        "observed": "status=unavailable; code=redirect_refused",
+        "result": "pass"
+      },
+      {
+        "id": "A04",
+        "title": "Oversized runtime response is cut off",
+        "expected": "failureCode=response_too_large",
+        "observed": "code=response_too_large",
+        "result": "pass"
+      },
+      {
+        "id": "A05",
+        "title": "Hung runtime hits the timeout",
+        "expected": "failureCode=timeout",
+        "observed": "code=timeout",
+        "result": "pass"
+      },
+      {
+        "id": "A06",
+        "title": "Malformed JSON from a runtime cannot pass as healthy",
+        "expected": "status=unavailable",
+        "observed": "status=unavailable; code=invalid_payload",
+        "result": "pass"
+      },
+      {
+        "id": "A07",
+        "title": "Closed port is reported unreachable, not healthy",
+        "expected": "failureCode=unreachable",
+        "observed": "code=unreachable",
+        "result": "pass"
+      },
+      {
+        "id": "B01",
+        "title": "Model listing is never presented as inference speed",
+        "expected": "inference listed under notTested",
+        "observed": "status=responding; models=1",
+        "result": "pass"
+      },
+      {
+        "id": "B02",
+        "title": "Inference report never contains prompt or output text",
+        "expected": "no prompt/output in report",
+        "observed": "prompt echoed=false; output echoed=false",
+        "result": "pass"
+      },
+      {
+        "id": "B03",
+        "title": "A failed inference creates no fake samples",
+        "expected": "error raised",
+        "observed": "rejected: Local Ollama inference returned HTTP 404",
+        "result": "pass"
+      },
+      {
+        "id": "B04",
+        "title": "Missing token counters stay null, not invented",
+        "expected": "evalTokens=null",
+        "observed": "tokens=null; tok/s=null",
+        "result": "pass"
+      },
+      {
+        "id": "C01",
+        "title": "Fit estimate is labelled heuristic with speed unknown",
+        "expected": "heuristic_not_measured",
+        "observed": "heuristic_not_measured; speed=unknown",
+        "result": "pass"
+      },
+      {
+        "id": "C02",
+        "title": "90B model on a 8 GB free-RAM host is not marked fitting",
+        "expected": "likely_insufficient_ram",
+        "observed": "likely_insufficient_ram",
+        "result": "pass"
+      },
+      {
+        "id": "C03",
+        "title": "Nonsense model descriptors are rejected",
+        "expected": "all rejected",
+        "observed": "5/5 rejected",
+        "result": "pass"
+      },
+      {
+        "id": "C04",
+        "title": "Duplicate model ids in a catalog are rejected",
+        "expected": "error",
+        "observed": "rejected: Model ids in a catalog must be unique",
+        "result": "pass"
+      },
+      {
+        "id": "D01",
+        "title": "No GPU probe means GPU is \"unknown\", never invented",
+        "expected": "gpu.status=unknown",
+        "observed": "gpu=unknown; npu=unknown",
+        "result": "pass"
+      },
+      {
+        "id": "D02",
+        "title": "Garbage nvidia-smi output yields \"unknown\"",
+        "expected": "unknown",
+        "observed": "unknown,unknown,unknown,unknown,unknown",
+        "result": "pass"
+      },
+      {
+        "id": "D03",
+        "title": "Valid nvidia-smi output is parsed from the probe only",
+        "expected": "detected, VRAM from output",
+        "observed": "gpu=detected; vramBytes=8589934592",
+        "result": "pass"
+      },
+      {
+        "id": "D04",
+        "title": "A tool on PATH is reported as found, never \"working\"",
+        "expected": "no capability implied",
+        "observed": "tools.* are PATH presence only",
+        "result": "pass"
+      },
+      {
+        "id": "E01",
+        "title": "Tampered report fails the integrity seal",
+        "expected": "verify=false",
+        "observed": "original=true; tampered=false",
+        "result": "pass"
+      },
+      {
+        "id": "E02",
+        "title": "Seal survives a JSON round-trip",
+        "expected": "verify=true",
+        "observed": "round-trip verified",
+        "result": "pass"
+      },
+      {
+        "id": "E03",
+        "title": "Secret patterns are redacted from text",
+        "expected": "no token in output",
+        "observed": "[REDACTED] API_KEY=[REDACTED] [REDACTED] [REDACTED]",
+        "result": "pass"
+      },
+      {
+        "id": "E04",
+        "title": "HTML report escapes untrusted markup",
+        "expected": "no <script> element",
+        "observed": "escaped",
+        "result": "pass"
+      },
+      {
+        "id": "E05",
+        "title": "Markdown report neutralises table-breaking input",
+        "expected": "pipes escaped",
+        "observed": "pipe escaped in model name",
+        "result": "pass"
+      },
+      {
+        "id": "F01",
+        "title": "Benchmark is labelled non-AI and bounded",
+        "expected": "type=synthetic_cpu_workload_not_ai_inference",
+        "observed": "synthetic_cpu_workload_not_ai_inference; samples=3; oversize run rejected: runs must be 2..30",
+        "result": "pass"
+      },
+      {
+        "id": "F02",
+        "title": "Unlike workloads are refused as not comparable",
+        "expected": "error",
+        "observed": "rejected: Workloads are not comparable",
+        "result": "pass"
+      },
+      {
+        "id": "G01",
+        "title": "Privacy audit does not claim runtime egress is safe",
+        "expected": "modelRuntimeEgress=not_tested",
+        "observed": "egress=not_tested; remote allowed=false",
+        "result": "pass"
+      },
+      {
+        "id": "H01",
+        "title": "Skill installer is idempotent and never overwrites",
+        "expected": "second run skips; custom file kept",
+        "observed": "first written=24/skipped=1; second written=0; custom kept=true",
+        "result": "pass"
+      },
+      {
+        "id": "H02",
+        "title": "Installer writes the documented path for all six IDEs",
+        "expected": "6 layouts, 25 skills each",
+        "observed": "claude:25 cursor:25 codex:25 gemini:25 copilot:25 opencode:25",
+        "result": "pass"
+      },
+      {
+        "id": "H03",
+        "title": "Installer refuses a symlinked project root",
+        "expected": "error (or skipped when the OS forbids symlinks)",
+        "observed": "rejected: Project must be a real directory (not a symlink)",
+        "result": "pass"
+      },
+      {
+        "id": "H04",
+        "title": "Installer refuses a symlinked .claude directory",
+        "expected": "error (or skipped)",
+        "observed": "rejected: Refusing to traverse a symlink or non-directory: .claude",
+        "result": "pass"
+      },
+      {
+        "id": "H05",
+        "title": "Installer dry-run writes nothing",
+        "expected": "no files created",
+        "observed": "planned=25; file exists=false",
+        "result": "pass"
+      },
+      {
+        "id": "I01",
+        "title": "Report server: 401 without token, 405 for POST, 127.0.0.1 only",
+        "expected": "401 / 200 / 405 / 127.0.0.1",
+        "observed": "none=401; wrong=401; valid=200; POST=405; bind=127.0.0.1",
+        "result": "pass"
+      },
+      {
+        "id": "I02",
+        "title": "Server refuses a weak token and an unsealed report",
+        "expected": "both refused",
+        "observed": "weak token: rejected: A strong 24+ character token required; bad seal: rejected: Not a valid sealed LocalSutra report",
+        "result": "pass"
+      },
+      {
+        "id": "J01",
+        "title": "Negative control: unsupported runtime kind is refused",
+        "expected": "error",
+        "observed": "rejected: Runtime must be ollama or llama",
+        "result": "pass"
+      },
+      {
+        "id": "J02",
+        "title": "Negative control: empty catalog is refused",
+        "expected": "error",
+        "observed": "rejected: Bounded model catalog (1..200 entries) required",
+        "result": "pass"
+      },
+      {
+        "id": "J03",
+        "title": "Negative control: oversized JSON input is refused",
+        "expected": "error",
+        "observed": "rejected: Input must be a bounded regular file",
+        "result": "pass"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "capability": "Hardware profile (this host)",
+      "result": "win32/x64, 14 logical CPUs, GPU unknown"
+    },
+    {
+      "capability": "Model fit (fixture host, 8 GB free RAM, synthetic catalog)",
+      "result": "2 of 3 possibly fit; heuristic only"
+    },
+    {
+      "capability": "Runtime probe (mock loopback Ollama, not a real runtime)",
+      "result": "status responding; 1 model listed; inference not tested"
+    },
+    {
+      "capability": "Synthetic CPU benchmark (not AI)",
+      "result": "5 runs, median 0.18 ms, stdev 0.04 ms"
+    },
+    {
+      "capability": "Privacy boundary",
+      "result": "loopback endpoint allowed=true; runtime egress not_tested"
+    }
+  ],
+  "evidenceTiers": [
+    {
+      "artifact": "hardware-profile.json",
+      "tier": "MEASURED_LOCAL",
+      "proves": "Values Node and fixed nvidia-smi argv reported on this host at this time",
+      "doesNotProve": "Capability of any other device, or that a model will run"
+    },
+    {
+      "artifact": "model-fit-report.json",
+      "tier": "HEURISTIC",
+      "proves": "Result of a stated memory formula on synthetic descriptors",
+      "doesNotProve": "That any model loads, its speed or its quality"
+    },
+    {
+      "artifact": "runtime-diagnostics.json",
+      "tier": "MOCK_FIXTURE",
+      "proves": "Probe logic against a local mock HTTP service",
+      "doesNotProve": "Behaviour of a real Ollama or llama.cpp install (not run)"
+    },
+    {
+      "artifact": "benchmark-results.json",
+      "tier": "MEASURED_LOCAL",
+      "proves": "Timing of a synthetic CPU loop",
+      "doesNotProve": "Any AI inference performance, GPU, power or quality"
+    },
+    {
+      "artifact": "privacy-check.json",
+      "tier": "RULE_CHECK",
+      "proves": "Endpoint validation rules and the data inventory",
+      "doesNotProve": "That an external runtime sends no network traffic"
+    }
+  ],
+  "notTested": [
+    "Live inference against a real Ollama or llama.cpp model (live inference: not run; no model is assumed to be installed)",
+    "GPU detection on AMD, Intel, Apple or NPU hardware (reported unknown, not absent)",
+    "Native skill activation inside Claude Code, Cursor, Codex, Gemini CLI, Copilot or OpenCode (file copying is verified; host execution is not)",
+    "Network egress of any external runtime (needs external monitoring)",
+    "Results on other operating systems than the host named above; see the CI matrix for those",
+    "Independent third-party security review, signed releases and SBOM (planned)"
+  ],
+  "artifacts": {
+    "artifacts/hardware-profile.json": "e4823711d4c012a86922612044fd17bb2b720f59876fb89a386dbbb661be212e",
+    "artifacts/model-fit-report.json": "9baa46edf34e88432bcc2529c023ae041482ce8c0676eb65e41f1325fcbf7bee",
+    "artifacts/runtime-diagnostics.json": "012d04afafa23945187c14955b36418d561db6e4a7eb582ca0b0084609c46529",
+    "artifacts/benchmark-results.json": "fca84796ecdffedf0ad0fc46e3790428faac1c3eb15ba09127b0775e90114baa",
+    "artifacts/privacy-check.json": "8b82ddb5b7c038c11e2db9e80992b1480eaa47e2a6af58163b3369103d9931b3"
+  },
+  "evidence": {
+    "algorithm": "sha256",
+    "sha256": "2929b6c1bba5f5499433cafe36db8b2bff0ba844cd01ce3a99d723475738a3e3"
+  }
+}

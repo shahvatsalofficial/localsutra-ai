@@ -1,0 +1,2 @@
+# Eight reproducible LocalSutra workflows
+The JSONs in `workflows/` specify goals, steps, evidence, and human authorization gates. Their instructions do not implement every step. Verified CLI commands implement only the explicitly supported portions. Maintain one canonical output status: `observed`, `heuristic`, `unknown`, `not_run` or `blocked`. Workflows include hardware readiness, model-fit, runtime doctor, private inference, benchmark reproducibility, privacy assessment, installation planning and evidence release gate.

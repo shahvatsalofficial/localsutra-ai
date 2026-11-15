@@ -1,0 +1,29 @@
+# LocalSutra AI — Synthetic CPU Benchmark (not AI)
+
+**Schema:** localsutra.benchmark.v1  
+**Integrity:** SHA-256 seal verified (03fd7b02f5f35fad…)  
+**Trust boundary:** Loopback only. No cloud calls, no telemetry. Unknown and not-run values are not successes.  
+
+> **Verdict: NOT_AI_INFERENCE** — A synthetic CPU loop. It says nothing about model speed, tokens per second, GPU, power or quality.
+
+**Runs / iterations:** 5 / 50000  
+**Warm-up:** discarded  
+**Environment:** Node v24.15.0 win32/x64  
+
+## Statistics
+
+| Metric | N | Median | p95 | Min | Max | Stdev |
+|---|---|---|---|---|---|---|
+| Wall time | 5 | 0.573 ms | 0.893 ms | 0.268 ms | 0.893 ms | 0.270 ms |
+| CPU user | 5 | 0.000 ms | 16.000 ms | 0.000 ms | 16.000 ms | 7.155 ms |
+
+## Limits
+
+- Not an LLM or runtime benchmark
+- Process RSS is not GPU VRAM
+- Host load and thermal state affect results
+- No power, energy or model quality measured
+- Small sample counts give wide uncertainty; see stdev
+
+---
+LocalSutra AI 0.2.0 · created by Vatsal Shah · Apache-2.0

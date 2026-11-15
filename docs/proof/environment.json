@@ -1,0 +1,13 @@
+{
+  "tool": "localsutra-ai",
+  "version": "0.2.0",
+  "node": "v24.15.0",
+  "platform": "win32/x64",
+  "os": "10.0.26300",
+  "recordedAt": "2026-11-15T20:32:27.424Z",
+  "tests": 122,
+  "pass": 122,
+  "fail": 0,
+  "skipped": 0,
+  "exitCode": 0
+}

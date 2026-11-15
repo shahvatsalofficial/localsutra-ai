@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/localsutra/report-v1.schema.json",
+  "title": "LocalSutra report integrity envelope",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "type": "string",
+      "pattern": "^localsutra\\."
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "algorithm",
+        "sha256"
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "evidence"
+  ]
+}

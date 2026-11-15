@@ -1,0 +1,44 @@
+{
+  "schema": "localsutra.hardware.v1",
+  "source": "node:os + optional nvidia-smi",
+  "profile": {
+    "os": "win32",
+    "architecture": "x64",
+    "wsl": false,
+    "cpuLogical": 14,
+    "cpuModel": "Intel(R) Core(TM) Ultra 7 155U",
+    "ramBytes": 33767481344,
+    "freeRamBytes": 6259986432,
+    "systemMemoryBytesEstimate": 27507494912,
+    "gpu": {
+      "status": "unknown",
+      "reason": "No supported GPU probe found (only nvidia-smi is implemented)."
+    },
+    "npu": {
+      "status": "unknown",
+      "reason": "No portable NPU probe is implemented"
+    },
+    "storage": {
+      "status": "measured",
+      "freeBytes": 162586198016,
+      "scope": "working directory volume"
+    },
+    "tools": {
+      "ollama": false,
+      "llamaServer": false,
+      "nvidiaSmi": false,
+      "node": true
+    }
+  },
+  "limitations": [
+    "Node reports host properties, not the capability of a different target device",
+    "GPU detection covers NVIDIA via nvidia-smi only; AMD, Intel, Apple and NPUs are reported unknown, not absent",
+    "No virtualisation restriction detected",
+    "A tool found on PATH is not proof it is installed correctly or can run a model",
+    "No model has been executed by this command"
+  ],
+  "evidence": {
+    "algorithm": "sha256",
+    "sha256": "5920ea70e1d8aefc530b1c6fe7df3e09eadd86f960859e48b5848173dc8490ad"
+  }
+}

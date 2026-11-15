@@ -1,0 +1,41 @@
+{
+  "name": "benchmark-reproducibility",
+  "version": "1.0",
+  "status": "partially_implemented",
+  "trigger": "user request, not background daemon",
+  "default_permissions": [
+    "read-only",
+    "no cloud",
+    "no installs"
+  ],
+  "steps": [
+    {
+      "index": 1,
+      "instruction": "Pick bounded workload and sample count",
+      "evidence_required": true
+    },
+    {
+      "index": 2,
+      "instruction": "Warm up only if explicitly documented",
+      "evidence_required": true
+    },
+    {
+      "index": 3,
+      "instruction": "Measure wall/CPU/RSS with scope labels",
+      "evidence_required": true
+    },
+    {
+      "index": 4,
+      "instruction": "Preserve samples, environment and reproducible configuration",
+      "evidence_required": true
+    }
+  ],
+  "human_approval": "Any external/network writes, install, model download, elevated access, hosted operation",
+  "outcome_statuses": [
+    "observed",
+    "heuristic",
+    "not_run",
+    "unknown",
+    "blocked"
+  ]
+}

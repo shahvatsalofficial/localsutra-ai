@@ -1,0 +1,23 @@
+$ localsutra probe --runtime ollama --endpoint http://127.0.0.1:1/ --timeout 500
+(exit 0)
+
+{
+  "schema": "localsutra.runtime.v1",
+  "runtime": "ollama",
+  "endpoint": "http://127.0.0.1:1/api/tags",
+  "networkScope": "loopback_get_only",
+  "status": "unavailable",
+  "failureCode": "unreachable",
+  "httpStatus": null,
+  "detail": "Loopback check failed (unreachable): fetch failed",
+  "models": [],
+  "notTested": [
+    "inference speed",
+    "prompt privacy within runtime",
+    "network egress by external runtime"
+  ],
+  "evidence": {
+    "algorithm": "sha256",
+    "sha256": "9f2a84687815e0143cc77a821bfcd6a843ed240c3035455903121412fcb6ceb7"
+  }
+}
