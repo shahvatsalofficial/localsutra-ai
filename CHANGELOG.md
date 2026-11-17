@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.1 - 2026-11-17
+### Changed
+- Requires Node.js 22+ (Node 20 is end of life). CI matrix: Node 22 and 24 on Linux and Windows, Node 24 on macOS.
+- GitHub Actions moved to current majors (`checkout@v7`, `setup-node@v7`, `upload-artifact@v7`); Dependabot keeps them current.
+### Added
+- Documentation site on GitHub Pages: https://shahvatsalofficial.github.io/localsutra-ai/ (built from `documents/html`, deployed by `pages.yml`).
+- Issue and pull-request templates, Dependabot config, `CODEOWNERS`.
+- Tests that keep `package.json`, the plugin manifest, `CITATION.cff` and `version.mjs` on one version, and validate every report against the envelope schema.
+### Fixed
+- `.claude-plugin/plugin.json` still said 0.1.0 and linked to a placeholder `OWNER/localsutra` URL.
+- Schema `$id` pointed at `example.invalid`; it now points at the real raw file URL.
+
 ## 0.2.0 — 2026-11-16
 ### Added
 - `audit` command: 37 adversarial assurance checks, sample outputs, evidence tiers and a not-tested list, written as **HTML, Markdown and JSON** (`audit-report.*` plus per-artifact reports). Verdicts: `APPROVED_WITH_EVIDENCE`, `REVIEW_REQUIRED`, `BLOCKED_UNSAFE`.

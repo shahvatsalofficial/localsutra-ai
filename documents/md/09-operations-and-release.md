@@ -8,7 +8,7 @@
 ## Continuous integration
 | Job | What it does |
 |---|---|
-| `test` matrix | Linux Node 20/22/24, Windows Node 20/22, macOS Node 22: tests, `doctor`, `demo`, `audit` |
+| `test` matrix | Linux Node 22/24, Windows Node 22/24, macOS Node 24: tests, `doctor`, `demo`, `audit` |
 | `package` | `npm pack`, install the tarball in an empty project, run the CLI through the npm shim, check audit files and skill install |
 | `secrets-scan` | greps history for token patterns |
 | Artifact | audit report uploaded from Linux Node 22 |

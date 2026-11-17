@@ -1,7 +1,7 @@
 # LocalSutra AI — Synthetic CPU Benchmark (not AI)
 
 **Schema:** localsutra.benchmark.v1  
-**Integrity:** SHA-256 seal verified (03fd7b02f5f35fad…)  
+**Integrity:** SHA-256 seal verified (6922259298aa18f5…)  
 **Trust boundary:** Loopback only. No cloud calls, no telemetry. Unknown and not-run values are not successes.  
 
 > **Verdict: NOT_AI_INFERENCE** — A synthetic CPU loop. It says nothing about model speed, tokens per second, GPU, power or quality.
@@ -14,8 +14,8 @@
 
 | Metric | N | Median | p95 | Min | Max | Stdev |
 |---|---|---|---|---|---|---|
-| Wall time | 5 | 0.573 ms | 0.893 ms | 0.268 ms | 0.893 ms | 0.270 ms |
-| CPU user | 5 | 0.000 ms | 16.000 ms | 0.000 ms | 16.000 ms | 7.155 ms |
+| Wall time | 5 | 0.349 ms | 0.787 ms | 0.315 ms | 0.787 ms | 0.232 ms |
+| CPU user | 5 | 0.000 ms | 0.000 ms | 0.000 ms | 0.000 ms | 0.000 ms |
 
 ## Limits
 
@@ -26,4 +26,4 @@
 - Small sample counts give wide uncertainty; see stdev
 
 ---
-LocalSutra AI 0.2.0 · created by Vatsal Shah · Apache-2.0
+LocalSutra AI 0.2.1 · created by Vatsal Shah · Apache-2.0

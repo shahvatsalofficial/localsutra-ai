@@ -18,15 +18,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - {os: ubuntu-latest, node: '20'}
           - {os: ubuntu-latest, node: '22'}
           - {os: ubuntu-latest, node: '24'}
-          - {os: windows-latest, node: '20'}
           - {os: windows-latest, node: '22'}
-          - {os: macos-latest, node: '22'}
+          - {os: windows-latest, node: '24'}
+          - {os: macos-latest, node: '24'}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node }}
       - name: Unit, integration and security tests
@@ -38,8 +37,8 @@ jobs:
       - name: Audit report (JSON + MD + HTML)
         run: node packages/cli/index.mjs audit --out audit-out
       - name: Upload audit report
-        if: matrix.os == 'ubuntu-latest' && matrix.node == '22'
-        uses: actions/upload-artifact@v4
+        if: matrix.os == 'ubuntu-latest' && matrix.node == '24'
+        uses: actions/upload-artifact@v7
         with:
           name: audit-report
           path: audit-out
@@ -49,10 +48,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: '22'
+          node-version: '24'
       - name: Pack
         run: npm pack --silent
       - name: Install tarball in an empty project and run the CLI through the npm bin shim
@@ -70,7 +69,7 @@ jobs:
     name: secret scan
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Scan for committed tokens

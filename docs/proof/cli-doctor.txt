@@ -11,8 +11,8 @@ $ localsutra doctor
     "cpuLogical": 14,
     "cpuModel": "Intel(R) Core(TM) Ultra 7 155U",
     "ramBytes": 33767481344,
-    "freeRamBytes": 6300741632,
-    "systemMemoryBytesEstimate": 27466739712,
+    "freeRamBytes": 1064243200,
+    "systemMemoryBytesEstimate": 32703238144,
     "gpu": {
       "status": "unknown",
       "reason": "No supported GPU probe found (only nvidia-smi is implemented)."
@@ -23,7 +23,7 @@ $ localsutra doctor
     },
     "storage": {
       "status": "measured",
-      "freeBytes": 162586222592,
+      "freeBytes": 162571366400,
       "scope": "working directory volume"
     },
     "tools": {
@@ -42,6 +42,6 @@ $ localsutra doctor
   ],
   "evidence": {
     "algorithm": "sha256",
-    "sha256": "44e0a19f6455948270570c8ffed3f62131ba90ce249dfdebc411be4b54d11164"
+    "sha256": "0af4b93ad1c61a5c0f79084d3503ac5b758ded8c09be67f5b53d6c88df97c46e"
   }
 }

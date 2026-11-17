@@ -5,7 +5,7 @@ This page lists what a skeptical reviewer can check, how to check it, and what r
 ## Verify it yourself in five commands
 ```bash
 git clone https://github.com/shahvatsalofficial/localsutra-ai && cd localsutra-ai
-npm test                                   # 122 tests on the recorded run
+npm test                                   # 126 tests on the recorded run
 npm run proof                              # regenerates docs/proof/*
 npm run audit                              # writes examples/audit/audit-report.{html,md,json}
 node packages/cli/index.mjs verify --report examples/audit/audit-report.json
@@ -14,7 +14,7 @@ node packages/cli/index.mjs verify --report examples/audit/audit-report.json
 ## Evidence index
 | Claim | Evidence | How to re-check |
 |---|---|---|
-| Tests pass | [test-run.tap](test-results/test-run.tap): 122 passed, 0 failed, 0 skipped | `npm test` |
+| Tests pass | [test-run.tap](test-results/test-run.tap): 126 passed, 0 failed, 0 skipped | `npm test` |
 | Hostile inputs handled | [fuzz-results.json](test-results/fuzz-results.json): 9500 cases, 0 unexpected crashes | `npm run proof` |
 | Safety gates work | [audit report](samples/audit/audit-report.html): 37 checks with expected vs observed | `npm run audit` |
 | Files unchanged | [SHA256SUMS.txt](test-results/SHA256SUMS.txt) | `sha256sum -c` style comparison |
@@ -38,4 +38,4 @@ Questions an auditor would ask, with honest answers:
 Behaviour with a real Ollama or llama.cpp install; non-NVIDIA GPU detection; native skill activation in each IDE; absence of egress from external runtimes; performance of any real model; third-party review.
 
 ## Reproducibility notes
-Timings vary by machine and load; the proof records them with sample counts and spread. The fuzz run is seeded for repeatability. All commands need only Node.js 20+.
+Timings vary by machine and load; the proof records them with sample counts and spread. The fuzz run is seeded for repeatability. All commands need only Node.js 22+.

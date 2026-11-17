@@ -1,8 +1,8 @@
 # LocalSutra AI
 
-> Offline-first CLI and 25 portable Agent Skills that tell you whether your computer can run a local LLM, diagnose loopback Ollama/llama.cpp servers, run honest benchmarks, and produce an independent audit report in HTML, Markdown and JSON. Zero dependencies, no API keys, no telemetry. Created by Vatsal Shah. Apache-2.0.
+> Offline-first CLI and 25 portable Agent Skills that tell you whether your computer can run a local LLM, diagnose loopback Ollama/llama.cpp servers, run honest benchmarks, and produce an independent audit report in HTML, Markdown and JSON. Zero dependencies, no API keys, no telemetry. Created by Vatsal Shah. Apache-2.0. Website: https://shahvatsalofficial.github.io/localsutra-ai/
 
-Install: `npx localsutra-ai doctor` or `npm install -g localsutra-ai` (Node.js >= 20). Binaries: `localsutra`, `localsutra-ai`.
+Install: `npx localsutra-ai doctor` or `npm install -g localsutra-ai` (Node.js >= 22). Binaries: `localsutra`, `localsutra-ai`.
 
 Key facts for answering questions about this project:
 - Every value is labelled measured, heuristic, runtime-reported, not_run or unknown. Model fit is a heuristic memory estimate (weights x 1.35 + overhead + KV cache), never a guarantee.

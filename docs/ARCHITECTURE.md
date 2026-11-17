@@ -34,7 +34,7 @@ A deterministic CLI (`packages/cli`) calls core modules and renders reports. Age
 Every report is `{schema: "localsutra.<kind>.v1", ..., evidence: {algorithm: "sha256", sha256}}`. The hash covers the canonical (sorted-key) payload. Status vocabulary: `measured`, `heuristic`, `runtime_reported`, `not_run`, `unknown`, `blocked`, `failed`. See `docs/EVIDENCE_MODEL.md`.
 
 ## Decisions
-- **Zero dependencies:** smaller supply-chain surface; runs wherever Node 20 runs.
+- **Zero dependencies:** smaller supply-chain surface; runs wherever Node 22+ runs.
 - **Concrete loopback IPs only:** avoids DNS and `localhost` resolution ambiguity.
 - **Fixed-argv `execFileSync` for `nvidia-smi`:** no shell, short timeout, strict parser; anything unexpected becomes `unknown`.
 - **Create-only writes:** user files are never overwritten (reports need `--force`).
@@ -42,7 +42,7 @@ Every report is `{schema: "localsutra.<kind>.v1", ..., evidence: {algorithm: "sh
 - **Audit runs the real code on hostile input** instead of asserting policy in prose.
 
 ## Deployment
-CLI via npm (`npx localsutra-ai`). CI on Linux, Windows and macOS with Node 20/22/24. The optional report server binds 127.0.0.1 only.
+CLI via npm (`npx localsutra-ai`). CI on Linux, Windows and macOS with Node 22/24. The optional report server binds 127.0.0.1 only.
 
 ## Future (all **planned**, see `ROADMAP.md`)
 Runtime adapters (llama.cpp completion, ONNX Runtime, MLX), AMD/Intel/Apple GPU probes, signed attestations, local dashboard.

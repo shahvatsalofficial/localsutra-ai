@@ -1,4 +1,4 @@
 $ localsutra --version
 (exit 0)
 
-LocalSutra AI 0.2.0
+LocalSutra AI 0.2.1

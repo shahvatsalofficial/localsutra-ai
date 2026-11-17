@@ -34,4 +34,4 @@
 - Hardware profile, model list and file names can be sensitive: review reports before sharing
 
 ---
-LocalSutra AI 0.2.0 · created by Vatsal Shah · Apache-2.0
+LocalSutra AI 0.2.1 · created by Vatsal Shah · Apache-2.0

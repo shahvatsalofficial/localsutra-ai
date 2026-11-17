@@ -19,4 +19,4 @@
 _possibly_fits is not a guarantee. Speed and quality are unknown. Heuristic, not measured._
 
 ---
-LocalSutra AI 0.2.0 · created by Vatsal Shah · Apache-2.0
+LocalSutra AI 0.2.1 · created by Vatsal Shah · Apache-2.0

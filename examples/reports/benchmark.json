@@ -12,66 +12,66 @@
   "statistics": {
     "wallMs": {
       "samples": 5,
-      "mean": 0.5508799999999999,
-      "median": 0.5734,
-      "p95": 0.8934,
-      "min": 0.2678,
-      "max": 0.8934,
-      "stdev": 0.26958302431718506
+      "mean": 0.49922000000000005,
+      "median": 0.3495,
+      "p95": 0.7868,
+      "min": 0.3152,
+      "max": 0.7868,
+      "stdev": 0.23172011565679837
     },
     "cpuUserMs": {
       "samples": 5,
-      "mean": 3.2,
+      "mean": 0,
       "median": 0,
-      "p95": 16,
+      "p95": 0,
       "min": 0,
-      "max": 16,
-      "stdev": 7.155417527999328
+      "max": 0,
+      "stdev": 0
     },
     "rssBytes": {
       "samples": 5,
-      "mean": 70985318.4,
-      "median": 71008256,
-      "p95": 71016448,
-      "min": 70889472,
-      "max": 71016448,
-      "stdev": 53765.36354196818
+      "mean": 70882099.2,
+      "median": 70897664,
+      "p95": 70901760,
+      "min": 70815744,
+      "max": 70901760,
+      "stdev": 37136.06273152823
     }
   },
   "samples": [
     {
-      "wallMs": 0.8934,
+      "wallMs": 0.7868,
       "cpuUserMs": 0,
       "cpuSystemMs": 0,
-      "processRssBytes": 70889472,
+      "processRssBytes": 70815744,
       "checksum": 35980960
     },
     {
-      "wallMs": 0.7213,
+      "wallMs": 0.7156,
       "cpuUserMs": 0,
-      "cpuSystemMs": 15,
-      "processRssBytes": 71004160,
+      "cpuSystemMs": 0,
+      "processRssBytes": 70897664,
       "checksum": 35980960
     },
     {
-      "wallMs": 0.5734,
+      "wallMs": 0.329,
       "cpuUserMs": 0,
       "cpuSystemMs": 0,
-      "processRssBytes": 71008256,
+      "processRssBytes": 70897664,
       "checksum": 35980960
     },
     {
-      "wallMs": 0.2678,
+      "wallMs": 0.3152,
       "cpuUserMs": 0,
       "cpuSystemMs": 0,
-      "processRssBytes": 71008256,
+      "processRssBytes": 70897664,
       "checksum": 35980960
     },
     {
-      "wallMs": 0.2985,
-      "cpuUserMs": 16,
+      "wallMs": 0.3495,
+      "cpuUserMs": 0,
       "cpuSystemMs": 0,
-      "processRssBytes": 71016448,
+      "processRssBytes": 70901760,
       "checksum": 35980960
     }
   ],
@@ -84,6 +84,6 @@
   ],
   "evidence": {
     "algorithm": "sha256",
-    "sha256": "03fd7b02f5f35fadb76d1906fc28b9e39799be1bc30babe1c9dec9a672de5388"
+    "sha256": "6922259298aa18f5b490df29a09e5af693a924d4d5dfd2543a74559e42106b9b"
   }
 }

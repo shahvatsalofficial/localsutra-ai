@@ -35,7 +35,7 @@ Create temp dir &rarr; run 37 checks (each in try/catch, recorded as pass/fail/s
 ## Quality attributes
 | Attribute | How |
 |---|---|
-| Portability | Node 20+, Linux/macOS/Windows in CI |
+| Portability | Node 22+, Linux/macOS/Windows in CI |
 | Safety | loopback only, bounded, create-only |
 | Honesty | evidence labels, not-tested list |
 | Maintainability | small modules, one renderer model, tests per control |

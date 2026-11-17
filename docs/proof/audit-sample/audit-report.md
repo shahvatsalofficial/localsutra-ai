@@ -1,13 +1,13 @@
 # LocalSutra AI — Independent Audit Report
 
 **Schema:** localsutra.audit.v1  
-**Integrity:** SHA-256 seal verified (2929b6c1bba5f549…)  
+**Integrity:** SHA-256 seal verified (e1b6dc685003465e…)  
 **Trust boundary:** Loopback only. No cloud calls, no telemetry. Unknown and not-run values are not successes.  
 
 > **Verdict: APPROVED_WITH_EVIDENCE** — BLOCKED_UNSAFE if any safety-gate check fails; REVIEW_REQUIRED if every check passed but some were skipped on this host; APPROVED_WITH_EVIDENCE if all ran and passed. Even then this is evidence for a human reviewer, not certification, and live model inference is always listed as not tested.
 
-**Tool:** LocalSutra AI 0.2.0  
-**Recorded:** 2026-11-15T20:32:39.169Z  
+**Tool:** LocalSutra AI 0.2.1  
+**Recorded:** 2026-11-17T17:19:28.008Z  
 **Environment:** Node v24.15.0 · win32/x64 · Intel(R) Core(TM) Ultra 7 155U  
 **Assurance checks:** 37 passed · 0 failed · 0 skipped of 37  
 
@@ -60,7 +60,7 @@
 | Hardware profile (this host) | win32/x64, 14 logical CPUs, GPU unknown |
 | Model fit (fixture host, 8 GB free RAM, synthetic catalog) | 2 of 3 possibly fit; heuristic only |
 | Runtime probe (mock loopback Ollama, not a real runtime) | status responding; 1 model listed; inference not tested |
-| Synthetic CPU benchmark (not AI) | 5 runs, median 0.18 ms, stdev 0.04 ms |
+| Synthetic CPU benchmark (not AI) | 5 runs, median 0.49 ms, stdev 0.17 ms |
 | Privacy boundary | loopback endpoint allowed=true; runtime egress not_tested |
 
 ## Evidence tiers
@@ -86,13 +86,13 @@
 
 | File | SHA-256 |
 |---|---|
-| artifacts/hardware-profile.json | e4823711d4c012a86922612044fd17bb2b720f59876fb89a386dbbb661be212e |
+| artifacts/hardware-profile.json | eb17804fcc27fb799f79ff480e61b8b88c01ef64703774f5ddb70be36fc89102 |
 | artifacts/model-fit-report.json | 9baa46edf34e88432bcc2529c023ae041482ce8c0676eb65e41f1325fcbf7bee |
-| artifacts/runtime-diagnostics.json | 012d04afafa23945187c14955b36418d561db6e4a7eb582ca0b0084609c46529 |
-| artifacts/benchmark-results.json | fca84796ecdffedf0ad0fc46e3790428faac1c3eb15ba09127b0775e90114baa |
+| artifacts/runtime-diagnostics.json | 759287faf84f0362d472ed1641fabd23432df8e65eca859659609e0c8e07afa8 |
+| artifacts/benchmark-results.json | f7f7ed7fbf823fd8fdcb3783e04202135a31c1684cb02cd40b72e09024cf4529 |
 | artifacts/privacy-check.json | 8b82ddb5b7c038c11e2db9e80992b1480eaa47e2a6af58163b3369103d9931b3 |
 
 _A SHA-256 seal detects change; it is not a signature and does not prove who produced the report. Only a human maintainer can approve a release._
 
 ---
-LocalSutra AI 0.2.0 · created by Vatsal Shah · Apache-2.0
+LocalSutra AI 0.2.1 · created by Vatsal Shah · Apache-2.0

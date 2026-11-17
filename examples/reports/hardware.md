@@ -1,13 +1,13 @@
 # LocalSutra AI — Hardware Profile
 
 **Schema:** localsutra.hardware.v1  
-**Integrity:** SHA-256 seal verified (0dc56d8fcf5938ec…)  
+**Integrity:** SHA-256 seal verified (6d6a52df2d1818e3…)  
 **Trust boundary:** Loopback only. No cloud calls, no telemetry. Unknown and not-run values are not successes.  
 
 **OS / architecture:** win32/x64  
 **CPU:** Intel(R) Core(TM) Ultra 7 155U (14 logical)  
-**RAM total / free:** 33.77 GB / 6.50 GB  
-**Free disk (working volume):** 162.58 GB  
+**RAM total / free:** 33.77 GB / 0.89 GB  
+**Free disk (working volume):** 162.57 GB  
 **GPU:** unknown: No supported GPU probe found (only nvidia-smi is implemented).  
 **NPU:** unknown: No portable NPU probe is implemented  
 
@@ -29,4 +29,4 @@
 - No model has been executed by this command
 
 ---
-LocalSutra AI 0.2.0 · created by Vatsal Shah · Apache-2.0
+LocalSutra AI 0.2.1 · created by Vatsal Shah · Apache-2.0

@@ -268,3 +268,40 @@ test('fitCatalog summary adds up', () => {
   const c = fitCatalog([{id: 'a', parametersB: 1, bitsPerWeight: 4}, {id: 'b', parametersB: 400, bitsPerWeight: 16}], h);
   assert.equal(c.summary.total, 2); assert.equal(c.summary.possiblyFits + c.summary.likelyInsufficient, 2);
 });
+
+test('version is identical in package.json, version.mjs, plugin manifest, CITATION.cff and CHANGELOG', async () => {
+  const pkg = JSON.parse(await readFile(path.join(ROOT, 'package.json'), 'utf8'));
+  const plugin = JSON.parse(await readFile(path.join(ROOT, '.claude-plugin/plugin.json'), 'utf8'));
+  const cff = await readFile(path.join(ROOT, 'CITATION.cff'), 'utf8');
+  const log = await readFile(path.join(ROOT, 'CHANGELOG.md'), 'utf8');
+  assert.equal(plugin.version, pkg.version);
+  assert.match(cff, new RegExp(`^version: ${pkg.version.replaceAll('.', '\\.')}$`, 'm'));
+  assert.match(log, new RegExp(`^## ${pkg.version.replaceAll('.', '\\.')} `, 'm'));
+});
+
+test('no placeholder or unreachable metadata URLs remain in published manifests', async () => {
+  for (const f of ['package.json', '.claude-plugin/plugin.json', 'schemas/report-v1.schema.json', 'CITATION.cff']) {
+    const text = await readFile(path.join(ROOT, f), 'utf8');
+    assert.ok(!/OWNER|example\.invalid|your-org/.test(text), f);
+  }
+});
+
+test('node engine floor and CI matrix agree', async () => {
+  const pkg = JSON.parse(await readFile(path.join(ROOT, 'package.json'), 'utf8'));
+  assert.equal(pkg.engines.node, '>=22');
+  const ci = await readFile(path.join(ROOT, '.github/workflows/ci.yml'), 'utf8');
+  assert.ok(!/node: '(18|20)'/.test(ci));
+  assert.match(ci, /actions\/checkout@v7/);
+});
+
+test('every report the audit produces satisfies the published envelope schema', async () => {
+  const schema = JSON.parse(await readFile(path.join(ROOT, 'schemas/report-v1.schema.json'), 'utf8'));
+  const schemaRe = new RegExp(schema.properties.schema.pattern), shaRe = new RegExp(schema.properties.evidence.properties.sha256.pattern);
+  const {artifacts, summary} = await runAudit();
+  for (const r of [...Object.values(artifacts), summary]) {
+    for (const k of schema.required) assert.ok(k in r, `${r.schema} lacks ${k}`);
+    assert.match(r.schema, schemaRe);
+    assert.equal(r.evidence.algorithm, 'sha256');
+    assert.match(r.evidence.sha256, shaRe);
+  }
+});

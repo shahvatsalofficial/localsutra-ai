@@ -8,8 +8,8 @@
     "cpuLogical": 14,
     "cpuModel": "Intel(R) Core(TM) Ultra 7 155U",
     "ramBytes": 33767481344,
-    "freeRamBytes": 6514294784,
-    "systemMemoryBytesEstimate": 27253186560,
+    "freeRamBytes": 1135333376,
+    "systemMemoryBytesEstimate": 32632147968,
     "gpu": {
       "status": "unknown",
       "reason": "No supported GPU probe found (only nvidia-smi is implemented)."
@@ -20,7 +20,7 @@
     },
     "storage": {
       "status": "measured",
-      "freeBytes": 162584760320,
+      "freeBytes": 162571218944,
       "scope": "working directory volume"
     },
     "tools": {
@@ -39,6 +39,6 @@
   ],
   "evidence": {
     "algorithm": "sha256",
-    "sha256": "d4a6f3670f5a39bc276d29eecad62b4d1c4f5986de3a92127759987514832583"
+    "sha256": "f50229a96fc14edce96f3121eea4e2ee44add65f6c0d0c8ee64d73636b4ffeba"
   }
 }

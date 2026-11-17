@@ -1,7 +1,7 @@
 # Technical Reference
 
 ## Requirements
-Node.js 20 or newer. No runtime or development dependencies. Optional: `nvidia-smi` for GPU facts; Ollama or llama.cpp for `probe`/`infer`.
+Node.js 22 or newer. No runtime or development dependencies. Optional: `nvidia-smi` for GPU facts; Ollama or llama.cpp for `probe`/`infer`.
 
 ## Repository layout
 | Path | Purpose |

@@ -38,4 +38,4 @@ Questions an auditor would ask, with honest answers:
 Behaviour with a real Ollama or llama.cpp install; non-NVIDIA GPU detection; native skill activation in each IDE; absence of egress from external runtimes; performance of any real model; third-party review.
 
 ## Reproducibility notes
-Timings vary by machine and load; the proof records them with sample counts and spread. The fuzz run is seeded for repeatability. All commands need only Node.js 20+.
+Timings vary by machine and load; the proof records them with sample counts and spread. The fuzz run is seeded for repeatability. All commands need only Node.js 22+.

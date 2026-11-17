@@ -6,8 +6,9 @@ type: software
 authors:
   - family-names: Shah
     given-names: Vatsal
-version: 0.2.0
-date-released: 2026-11-16
+version: 0.2.1
+date-released: 2026-11-17
 license: Apache-2.0
+url: "https://shahvatsalofficial.github.io/localsutra-ai/"
 repository-code: "https://github.com/shahvatsalofficial/localsutra-ai"
 keywords: [local-llm, ollama, llama.cpp, model-fit, hardware-profile, privacy, agent-skills, audit]

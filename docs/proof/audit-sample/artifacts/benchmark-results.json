@@ -12,12 +12,12 @@
   "statistics": {
     "wallMs": {
       "samples": 5,
-      "mean": 0.2023,
-      "median": 0.1822,
-      "p95": 0.2497,
-      "min": 0.1607,
-      "max": 0.2497,
-      "stdev": 0.0389862155126655
+      "mean": 0.42912,
+      "median": 0.4896,
+      "p95": 0.6316,
+      "min": 0.2344,
+      "max": 0.6316,
+      "stdev": 0.17367468727480123
     },
     "cpuUserMs": {
       "samples": 5,
@@ -30,48 +30,48 @@
     },
     "rssBytes": {
       "samples": 5,
-      "mean": 70651084.8,
-      "median": 70676480,
-      "p95": 70746112,
-      "min": 70524928,
-      "max": 70746112,
-      "stdev": 99634.72641202966
+      "mean": 70537216,
+      "median": 70565888,
+      "p95": 70565888,
+      "min": 70443008,
+      "max": 70565888,
+      "stdev": 53405.3061034201
     }
   },
   "samples": [
     {
-      "wallMs": 0.2497,
+      "wallMs": 0.6316,
       "cpuUserMs": 0,
       "cpuSystemMs": 0,
-      "processRssBytes": 70524928,
+      "processRssBytes": 70443008,
       "checksum": 35980960
     },
     {
-      "wallMs": 0.1822,
+      "wallMs": 0.5287,
       "cpuUserMs": 0,
       "cpuSystemMs": 0,
-      "processRssBytes": 70569984,
+      "processRssBytes": 70545408,
       "checksum": 35980960
     },
     {
-      "wallMs": 0.2377,
+      "wallMs": 0.4896,
       "cpuUserMs": 0,
       "cpuSystemMs": 0,
-      "processRssBytes": 70676480,
+      "processRssBytes": 70565888,
       "checksum": 35980960
     },
     {
-      "wallMs": 0.1607,
+      "wallMs": 0.2344,
       "cpuUserMs": 0,
       "cpuSystemMs": 0,
-      "processRssBytes": 70737920,
+      "processRssBytes": 70565888,
       "checksum": 35980960
     },
     {
-      "wallMs": 0.1812,
+      "wallMs": 0.2613,
       "cpuUserMs": 0,
       "cpuSystemMs": 0,
-      "processRssBytes": 70746112,
+      "processRssBytes": 70565888,
       "checksum": 35980960
     }
   ],
@@ -84,6 +84,6 @@
   ],
   "evidence": {
     "algorithm": "sha256",
-    "sha256": "2202b0edfacab7d031e66486ee8ea88ed78368edecd3066f1a891e77b8f0931c"
+    "sha256": "a35b3d2dca9c213eea99ecb54c6f99fdc5212c4cef0b62ab9ed668b353ec3c9c"
   }
 }

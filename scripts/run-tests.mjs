@@ -1,4 +1,4 @@
-// Cross-platform test runner: cmd.exe does not expand shell globs on Node 20.
+// Cross-platform test runner: cmd.exe does not expand shell globs on older Node versions.
 import fs from 'node:fs';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';

@@ -5,16 +5,16 @@
 ## Environment
 | Field | Value |
 |---|---|
-| Tool | LocalSutra AI 0.2.0 |
+| Tool | LocalSutra AI 0.2.1 |
 | Node.js | v24.15.0 |
 | Platform | win32/x64 |
-| Recorded | 2026-11-15T20:32:27.424Z |
+| Recorded | 2026-11-17T17:19:18.302Z |
 
 ## Result
 | Metric | Value |
 |---|---|
-| Tests | 122 |
-| Passed | 122 |
+| Tests | 126 |
+| Passed | 126 |
 | Failed | 0 |
 | Skipped | 0 |
 | Fuzz cases | 9500 |

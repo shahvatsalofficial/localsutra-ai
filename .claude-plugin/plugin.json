@@ -1,10 +1,10 @@
 {
   "name": "localsutra-ai",
   "description": "LocalSutra AI \u2014 hardware fit and private local AI diagnostic skills",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "author": {
     "name": "Vatsal Shah"
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/OWNER/localsutra"
+  "homepage": "https://github.com/shahvatsalofficial/localsutra-ai"
 }
