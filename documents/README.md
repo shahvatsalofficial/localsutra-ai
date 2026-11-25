@@ -1,10 +1,12 @@
-# LocalSutra AI — documents
+# LocalSutra AI documents
 
-Complete documentation set for **LocalSutra AI 0.2.1** (technical, functional, architecture, executive, user guide, security, evidence, test report, legal, roadmap, glossary, assurance).
+Online: https://shahvatsalofficial.github.io/localsutra-ai/
 
-- Start: `html/index.html` (open in a browser; self-contained, responsive, light/dark, printable)
-- Markdown sources: `md/` (with placeholders) and `md-rendered/` (numbers filled from the recorded run)
-- Proof: `test-results/` (TAP log, fuzz, environment) · Samples: `samples/` (real audit report in MD/HTML/JSON, CLI transcripts)
-- Rebuild: `node build.mjs` after `npm run proof` and `npm run audit` in `../../LocalSutra-AI`
+| Folder | Content |
+|---|---|
+| `md/` | Markdown sources. `{{NAME}}` placeholders are filled from the recorded proof run; `@@diagram:...@@` lines insert figures |
+| `site/` | Theme, scripts and figure generators |
+| `html/` | Built site (deployed to GitHub Pages). Do not edit by hand |
+| `build.mjs` | Zero-dependency builder; runs the real CLI to produce scenario output |
 
-Project: https://github.com/shahvatsalofficial/localsutra-ai
+Rebuild: `npm run proof`, `npm run audit`, `npm run demo`, then `npm run docs`.

@@ -6,6 +6,9 @@
 - `npm pack` contents are limited by the `files` allow-list (packages, skills, agents, schemas, rules, policies, workflows, fixtures, docs, examples, notices).
 
 ## Continuous integration
+
+@@diagram:ci@@
+
 | Job | What it does |
 |---|---|
 | `test` matrix | Linux Node 22/24, Windows Node 22/24, macOS Node 24: tests, `doctor`, `demo`, `audit` |

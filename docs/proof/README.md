@@ -4,11 +4,11 @@ Regenerate: `npm run proof`. These files are machine output, not hand-written.
 
 | Field | Value |
 |---|---|
-| Tool | localsutra-ai 0.2.1 |
+| Tool | localsutra-ai 0.2.2 |
 | Node / platform | v24.15.0 · win32/x64 |
-| Recorded | 2026-11-17T17:19:18.302Z |
-| Tests | 126 |
-| Passed | 126 |
+| Recorded | 2026-11-25T14:39:21.402Z |
+| Tests | 130 |
+| Passed | 130 |
 | Failed | 0 |
 | Skipped | 0 |
 | Fuzz | 9500 hostile inputs, 0 unexpected crashes |

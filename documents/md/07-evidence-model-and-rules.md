@@ -1,6 +1,9 @@
 # Evidence Model and Rules
 
 ## Evidence labels
+
+@@html:ladder@@
+
 | Label | Meaning | Example |
 |---|---|---|
 | `measured` | read or timed on this host now | CPU, RAM, disk, CPU-loop timing |
@@ -19,6 +22,9 @@
 | `RULE_CHECK` | endpoint rules and the data inventory | that a runtime sends no traffic |
 
 ## The seal
+
+@@diagram:seal@@
+
 `evidence.sha256` covers the canonical payload. It detects change. It is not a signature, does not name an author and can be recomputed by someone who edits the report. Signed attestations are planned.
 
 ## The ten operating rules (`rules/`)

@@ -12,6 +12,11 @@ node packages/cli/index.mjs verify --report examples/audit/audit-report.json
 ```
 
 ## Evidence index
+
+@@bars@@
+
+@@diagram:verdict@@
+
 | Claim | Evidence | How to re-check |
 |---|---|---|
 | Tests pass | [test-run.tap](test-results/test-run.tap): {{PASS}} passed, {{FAIL}} failed, {{SKIPPED}} skipped | `npm test` |

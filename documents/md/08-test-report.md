@@ -11,6 +11,9 @@
 | Recorded | {{RECORDED}} |
 
 ## Result
+
+@@bars@@
+
 | Metric | Value |
 |---|---|
 | Tests | {{TESTS}} |

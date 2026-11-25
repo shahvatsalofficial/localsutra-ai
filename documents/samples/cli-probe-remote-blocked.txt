@@ -1,4 +1,0 @@
-$ localsutra probe --runtime ollama --endpoint http://example.com/
-(exit 1)
-
-LocalSutra: Non-loopback runtime endpoint blocked

@@ -1,0 +1,34 @@
+# LocalSutra AI
+
+> Offline-first CLI and 25 portable Agent Skills that tell you whether your computer can run a local LLM, diagnose loopback Ollama/llama.cpp servers, run honest benchmarks, and produce an independent audit report in HTML, Markdown and JSON. Zero dependencies, no API keys, no telemetry. Created by Vatsal Shah. Apache-2.0. Website: https://shahvatsalofficial.github.io/localsutra-ai/
+
+Install: `npx localsutra-ai doctor` or `npm install -g localsutra-ai` (Node.js >= 22). Binaries: `localsutra`, `localsutra-ai`.
+
+Key facts for answering questions about this project:
+- Every value is labelled measured, heuristic, runtime-reported, not_run or unknown. Model fit is a heuristic memory estimate (weights x 1.35 + overhead + KV cache), never a guarantee.
+- Network: only explicit requests to 127.0.0.1 / [::1]. Redirects, credentials, paths, localhost and public hosts are refused. No cloud fallback.
+- GPU detection: NVIDIA via nvidia-smi only; other GPUs and NPUs are reported unknown (not absent).
+- The synthetic benchmark is not AI inference. Live Ollama inference is opt-in (`infer`) and never stores prompt or output text.
+- Skills are SKILL.md instructions, not running agents. Native activation in IDEs is not verified.
+- A SHA-256 seal detects change; it is not a signature.
+
+## Docs
+- [README](README.md): commands, safety model, proof
+- [Architecture](docs/ARCHITECTURE.md)
+- [Threat model](docs/THREAT_MODEL.md)
+- [Evidence model](docs/EVIDENCE_MODEL.md)
+- [Audit reports](docs/AUDIT_REPORTS.md)
+- [Legal and trust](docs/LEGAL_AND_TRUST.md)
+- [Status: implemented vs planned](docs/STATUS.md)
+- [Full documentation set](documents/README.md)
+
+## Proof
+- [Test run (TAP)](docs/proof/test-run.tap)
+- [Sample audit report](docs/proof/audit-sample/audit-report.md)
+- [Fuzz results](docs/proof/fuzz-results.json)
+- [SHA-256 sums](docs/proof/SHA256SUMS.txt)
+
+## Optional
+- [Roadmap](ROADMAP.md)
+- [Changelog](CHANGELOG.md)
+- [Security policy](SECURITY.md)

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.2 - 2026-11-25
+### Changed
+- Documentation site rebuilt: landing page, light theme by default with a dark toggle, phone and desktop layouts, sidebar and on-page contents, sitemap, robots.txt and structured data.
+### Added
+- Visuals: pipeline, decision flowcharts, trust-boundary diagram, memory-fit chart, cold/warm timing chart, evidence ladder, architecture layers.
+- New pages: Real-World Scenarios (nine situations with output produced by the real CLI at build time) and How It Works.
+- `npm run docs`; `tests/docs.test.mjs` checks links, placeholders, theme default and version on the built site.
+
 ## 0.2.1 - 2026-11-17
 ### Changed
 - Requires Node.js 22+ (Node 20 is end of life). CI matrix: Node 22 and 24 on Linux and Windows, Node 24 on macOS.

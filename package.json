@@ -1,6 +1,6 @@
 {
   "name": "localsutra-ai",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "LocalSutra AI: offline-first local AI readiness CLI. Hardware profile, model-fit estimates, Ollama/llama.cpp loopback diagnostics, honest benchmarks and an independent audit report (MD, HTML, JSON), plus 25 portable Agent Skills. No API keys, no cloud, zero dependencies.",
   "author": {"name": "Vatsal Shah", "url": "https://github.com/shahvatsalofficial"},
   "license": "Apache-2.0",
@@ -15,6 +15,7 @@
     "audit": "node packages/cli/index.mjs audit --out examples/audit --force",
     "pack:check": "npm pack --dry-run",
     "proof": "node scripts/proof.mjs",
+    "docs": "node documents/build.mjs",
     "help": "node packages/cli/index.mjs help"
   },
   "homepage": "https://shahvatsalofficial.github.io/localsutra-ai/",

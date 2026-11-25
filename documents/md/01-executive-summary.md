@@ -6,6 +6,9 @@
 People who want to run AI locally for privacy, cost or learning face four guesses: will this model fit, what do I need to install, is my setup really private, and how fast will it be. Existing answers are scattered forum posts and calculators that present estimates as facts.
 
 ## The product
+
+@@diagram:pipeline@@
+
 - A zero-dependency Node.js CLI (`localsutra`) with no API key, no account and no telemetry.
 - **Hardware profile:** OS, CPU, RAM, free disk, WSL flag and NVIDIA GPU/VRAM when `nvidia-smi` exists. Everything else is reported *unknown*, never guessed.
 - **Model-fit estimate:** a transparent memory formula with printed assumptions. It never promises a model will run.
@@ -14,6 +17,9 @@ People who want to run AI locally for privacy, cost or learning face four guesse
 - **25 portable Agent Skills** for Claude Code, Cursor, Codex, Gemini CLI, GitHub Copilot and OpenCode.
 
 ## Why trust it
+
+@@bars@@
+
 | Evidence | Value (recorded run) |
 |---|---|
 | Automated tests | {{TESTS}} run, {{PASS}} passed, {{FAIL}} failed, {{SKIPPED}} skipped |

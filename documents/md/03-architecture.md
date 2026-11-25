@@ -1,6 +1,9 @@
 # Architecture
 
 ## Layers
+
+@@html:layers@@
+
 | Layer | Components | Trust |
 |---|---|---|
 | Presentation | `packages/cli`, HTML/Markdown/JSON reports | untrusted input from argv and files |
@@ -10,6 +13,9 @@
 | Agent layer | `skills/`, `.claude/agents/`, `agents/manifest.json` | instructions only; no execution authority |
 
 ## Context diagram
+
+@@html:trust@@
+
 ```
 user / IDE agent --argv--> CLI --> core --> node:os, statfs, nvidia-smi    (measured)
                                      |--> http://127.0.0.1:PORT           (runtime-reported, on request)

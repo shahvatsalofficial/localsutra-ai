@@ -1,6 +1,9 @@
 # Security and Privacy
 
 ## Security principles
+
+@@html:trust@@
+
 1. **Read-only by default.** No installs, downloads, driver changes, listening ports or telemetry.
 2. **Loopback only.** One policy function validates every endpoint before any network call.
 3. **Everything external is untrusted data:** runtime responses, model names, catalogs, `nvidia-smi` text, README content.

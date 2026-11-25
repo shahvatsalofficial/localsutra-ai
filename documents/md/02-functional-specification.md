@@ -4,6 +4,9 @@
 Students and hobbyists with ordinary laptops, privacy-minded individuals, educators, developers using Ollama or llama.cpp, researchers comparing hardware, and teams who want evidence before choosing a local-AI setup.
 
 ## Jobs to be done
+
+@@diagram:pipeline@@
+
 1. "Can this machine run this model?" Answered by `fit` with assumptions.
 2. "Is my local server up and really loopback?" Answered by `probe` and `privacy`.
 3. "How fast is my installed model here?" Answered by opt-in `infer` (cold vs warm runs).
@@ -30,6 +33,9 @@ Students and hobbyists with ordinary laptops, privacy-minded individuals, educat
 Every report command can print `--format json|md|html` or write all three with `--out`. Existing files are never overwritten unless `--force`.
 
 ## Fit model
+
+@@diagram:canifit@@
+
 `required = weights x headroom(1.35) + overhead + KV cache` where `weights = parameters x bits / 8`. KV cache is included only when `kvBytesPerToken` is supplied. Category `possibly_fits` means free RAM is at least the estimate; `likely_insufficient_ram` means it is not. With a detected NVIDIA GPU the report adds a single-GPU VRAM verdict. Speed and quality are always `unknown`.
 
 ## Acceptance criteria (verified by tests)

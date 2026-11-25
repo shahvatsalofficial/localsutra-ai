@@ -1,0 +1,25 @@
+{
+  "schema": "localsutra.runtime.v1",
+  "runtime": "ollama",
+  "endpoint": "http://127.0.0.1:55456/api/tags",
+  "networkScope": "loopback_get_only",
+  "status": "responding",
+  "failureCode": null,
+  "httpStatus": 200,
+  "detail": "Ollama list endpoint responded; inference has not been tested",
+  "models": [
+    {
+      "name": "mock-model:3b",
+      "sizeBytes": 1900000000
+    }
+  ],
+  "notTested": [
+    "inference speed",
+    "prompt privacy within runtime",
+    "network egress by external runtime"
+  ],
+  "evidence": {
+    "algorithm": "sha256",
+    "sha256": "8377ea17571f0d033ddf319e803006a5be1a5eb72ca14a2ed621ebdc81eef0f7"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema": "localsutra.audit.v1",
-  "toolVersion": "0.2.1",
-  "recordedAt": "2026-11-17T17:19:28.008Z",
+  "toolVersion": "0.2.2",
+  "recordedAt": "2026-11-25T14:39:36.003Z",
   "verdict": "APPROVED_WITH_EVIDENCE",
   "verdictRule": "BLOCKED_UNSAFE if any safety-gate check fails; REVIEW_REQUIRED if every check passed but some were skipped on this host; APPROVED_WITH_EVIDENCE if all ran and passed. Even then this is evidence for a human reviewer, not certification, and live model inference is always listed as not tested.",
   "environment": {
@@ -293,7 +293,7 @@
     },
     {
       "capability": "Synthetic CPU benchmark (not AI)",
-      "result": "5 runs, median 0.49 ms, stdev 0.17 ms"
+      "result": "5 runs, median 0.22 ms, stdev 0.16 ms"
     },
     {
       "capability": "Privacy boundary",
@@ -341,14 +341,14 @@
     "Independent third-party security review, signed releases and SBOM (planned)"
   ],
   "artifacts": {
-    "artifacts/hardware-profile.json": "eb17804fcc27fb799f79ff480e61b8b88c01ef64703774f5ddb70be36fc89102",
+    "artifacts/hardware-profile.json": "a0fa9868e5f0077fca842c2a150fc991964cfed57c84b0f496fb2b9a0a396f9b",
     "artifacts/model-fit-report.json": "9baa46edf34e88432bcc2529c023ae041482ce8c0676eb65e41f1325fcbf7bee",
-    "artifacts/runtime-diagnostics.json": "759287faf84f0362d472ed1641fabd23432df8e65eca859659609e0c8e07afa8",
-    "artifacts/benchmark-results.json": "f7f7ed7fbf823fd8fdcb3783e04202135a31c1684cb02cd40b72e09024cf4529",
+    "artifacts/runtime-diagnostics.json": "43acd710c7f0561b82fa7e3c5a2239b07ce12f19afa05f4d5e7f9e27b782083d",
+    "artifacts/benchmark-results.json": "36d3faf4461da3d7cae344b21817c3648519805187fbdc4e6e46acf7fc3242b0",
     "artifacts/privacy-check.json": "8b82ddb5b7c038c11e2db9e80992b1480eaa47e2a6af58163b3369103d9931b3"
   },
   "evidence": {
     "algorithm": "sha256",
-    "sha256": "e1b6dc685003465e367dec8539a1b7fdfbab5e5fdf483b731ffd57641f3310c6"
+    "sha256": "0605ecae3c40e78b11f45d85f4c7381d87db2724d3a4b6a9cdf97c576852774b"
   }
 }

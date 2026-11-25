@@ -1,7 +1,7 @@
 {
   "schema": "localsutra.runtime.v1",
   "runtime": "ollama",
-  "endpoint": "http://127.0.0.1:49674/api/tags",
+  "endpoint": "http://127.0.0.1:55456/api/tags",
   "networkScope": "loopback_get_only",
   "status": "responding",
   "failureCode": null,
@@ -20,6 +20,6 @@
   ],
   "evidence": {
     "algorithm": "sha256",
-    "sha256": "58423dde7cd4f59c234631940400afaf5f77f728ef67e9c6da9417d065e73246"
+    "sha256": "8377ea17571f0d033ddf319e803006a5be1a5eb72ca14a2ed621ebdc81eef0f7"
   }
 }

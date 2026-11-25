@@ -1,12 +1,12 @@
 {
   "tool": "localsutra-ai",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "node": "v24.15.0",
   "platform": "win32/x64",
   "os": "10.0.26300",
-  "recordedAt": "2026-11-17T17:19:18.302Z",
-  "tests": 126,
-  "pass": 126,
+  "recordedAt": "2026-11-25T14:39:21.402Z",
+  "tests": 130,
+  "pass": 130,
   "fail": 0,
   "skipped": 0,
   "exitCode": 0
